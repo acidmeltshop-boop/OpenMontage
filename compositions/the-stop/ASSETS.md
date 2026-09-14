@@ -24,18 +24,21 @@ character across ten images.
 still* to Omni / MiniMax with only a motion prompt. Text-to-video will invent its own
 style per clip and break continuity at every cut.
 
-**Cutouts use a magenta key.** Where a subject must be isolated, the prompt asks for a
-flat `#FF00FF` background. Magenta appears nowhere in a grayscale illustration, so it
-keys out cleanly. Do **not** substitute white — his shirt and socks are near-white and
-would key with holes.
+**Cutouts use a green key.** Where a subject must be isolated, the prompt asks for a
+flat `#00FF00` background. Green appears nowhere in a grayscale illustration and
+nowhere in the Phoenix palette, so it keys out cleanly and is unambiguous. Do **not**
+substitute white — his shirt and socks are near-white and would key with holes. This
+was magenta in an earlier revision; it changed because magenta is now a brand color,
+and asking a model for "magenta" risks getting Phoenix magenta instead of key magenta.
 
 **Vertical framing is a rethink, not a crop.** Each prompt below states its vertical
 composition explicitly — what sits at the top of the frame, what sits at the bottom.
 Follow that language; it's what makes the cuts work.
 
-**Design system pending.** Phoenix Dialectic wasn't readable from this session. The
-piece is monochrome from the hero image, and the single accent event at S10 is the
-one-token insertion point once you get me the tokens.
+**Phoenix Dialectic is now in hand** (supplied as an HTML export, rendered and read).
+It changes the *composition* layer — ground, type, color logic — but **not one word of
+the prompts below**. The assets stay monochrome ink on paper; Phoenix is applied in
+code around them. Generate against this spec as written.
 
 ---
 
@@ -104,7 +107,7 @@ Him alone, keyed. Used for text-masked-behind-subject and for parallax against `
 > Knees apart, forearms resting on his thighs, shoulders rounded forward, head tilted
 > slightly down and to the side, gazing downward with a flat exhausted expression. He
 > loosely holds a dark smartphone in his right hand, screen facing away. He is
-> isolated completely on a flat solid pure magenta background, hex #FF00FF, with no
+> isolated completely on a flat solid pure green background, hex #00FF00, with no
 > shadow cast onto the background and no scenery of any kind. [CHARACTER ANCHOR]
 
 ### `img-05-face-closeup.png`
@@ -126,8 +129,8 @@ The object that flies at camera at S5.
 > slightly so its top edge recedes. Plain dark bezel-less body, blank flat white
 > screen with nothing on it. Crisp black outline, flat gray side panels, one hard
 > highlight streak across the glass. The phone occupies roughly the middle half of a
-> vertical frame. Isolated completely on a flat solid pure magenta background, hex
-> #FF00FF, with no shadow on the background.
+> vertical frame. Isolated completely on a flat solid pure green background, hex
+> #00FF00, with no shadow on the background.
 
 ### `img-07-feed-a.png` and `img-08-feed-b.png`
 Two images, each holding **three stacked wide panels**. Six vignettes total — I
@@ -162,7 +165,7 @@ from the format.
 > curling gently at the bottom end with one soft fold across its middle. Plain white
 > paper with a torn perforated top edge and subtle grain. Completely blank — no
 > printing, no text, no numbers, no barcode, no ruled lines of any kind. Isolated on a
-> flat solid pure magenta background, hex #FF00FF, with no shadow on the background.
+> flat solid pure green background, hex #00FF00, with no shadow on the background.
 
 ### `img-10-standing.png`
 The turn at S10.
@@ -207,7 +210,7 @@ cuts — all cutting happens in the edit.
 > The phone accelerates rapidly toward the camera, growing from small to filling the
 > entire frame, rotating slightly as it travels so its screen squares up to face the
 > viewer by the final frame. Fast, aggressive, weighted motion with real momentum.
-> The magenta background stays completely flat, even and unchanged throughout. Motion
+> The green background stays completely flat, even and unchanged throughout. Motion
 > blur on the phone is fine. The camera itself does not move — only the phone travels.
 
 ### `vid-03-stand-up.mp4` — from `img-10-standing.png` — 4s
@@ -251,12 +254,12 @@ in the edit, and knowing which prompts misbehaved tells me where the spec is wea
 
 - [ ] `img-02-hero-vertical.png`
 - [ ] `img-03-hero-plate.png`
-- [ ] `img-04-char-cutout.png` *(magenta)*
+- [ ] `img-04-char-cutout.png` *(green key)*
 - [ ] `img-05-face-closeup.png`
-- [ ] `img-06-phone-object.png` *(magenta)*
+- [ ] `img-06-phone-object.png` *(green key)*
 - [ ] `img-07-feed-a.png`
 - [ ] `img-08-feed-b.png`
-- [ ] `img-09-receipt.png` *(magenta)*
+- [ ] `img-09-receipt.png` *(green key)*
 - [ ] `img-10-standing.png`
 - [ ] `img-11-bus.png`
 - [ ] `vid-01-ambient-hero.mp4` *(from img-02)*
