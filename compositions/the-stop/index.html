@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>The Stop</title>
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: 'Anton'; src: url('vendor/fonts/anton-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: block; }
+      @font-face { font-family: 'Archivo'; src: url('vendor/fonts/archivo-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: block; }
+      @font-face { font-family: 'Archivo'; src: url('vendor/fonts/archivo-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: block; }
+      @font-face { font-family: 'Space Mono'; src: url('vendor/fonts/space-mono-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: block; }
+      @font-face { font-family: 'Space Mono'; src: url('vendor/fonts/space-mono-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: block; }
+
+      :root {
+        /* Phoenix Dialectic */
+        --paper-100:#FAF8F1; --paper-200:#F5F1E6; --paper-300:#EFEADB; --paper-400:#E1DED9;
+        --ink-300:#9C9C9C; --ink-500:#5A5A55; --ink-700:#1C1C19; --ink-800:#0A0A08; --ink-900:#000000;
+        --yellow-200:#FBF0A0; --yellow-400:#FCE20F; --yellow-500:#F2D10A; --yellow-600:#D9BC00;
+        --magenta-200:#FFCDEC; --magenta-400:#E0218A; --magenta-500:#CC017F; --magenta-600:#A20F6A;
+        --mech: var(--yellow-500);      /* System Protocol */
+        --sent: var(--magenta-500);     /* Sentient Entity */
+        --line-grid: rgba(10,10,8,.18);
+        --border-box:3px; --border-heavy:5px; --border-slab:8px;
+        --display:'Anton', Impact, sans-serif;
+        --sans:'Archivo', system-ui, sans-serif;
+        --mono:'Space Mono', ui-monospace, monospace;
+      }
+      body { margin:0; background:var(--paper-200); color:var(--ink-900); }
+      #root { position:relative; width:1080px; height:1920px; overflow:hidden; background:var(--paper-200); }
+      .clip { position:absolute; inset:0; }
+      .fill { position:absolute; inset:0; }
+      .mid  { display:grid; place-items:center; }
+
+      /* ── ground ─────────────────────────────────────────── */
+      #paper { background:var(--paper-200); }
+      #grid {
+        background-image:
+          repeating-linear-gradient(to right, var(--line-grid) 0 1px, transparent 1px 172px),
+          repeating-linear-gradient(to bottom, var(--line-grid) 0 1px, transparent 1px 172px);
+        opacity:.55;
+      }
+      #halftone {
+        background-image: radial-gradient(circle at center, rgba(10,10,8,.22) 0.8px, transparent 0.9px);
+        background-size: 4px 4px; opacity:.5;
+      }
+      video.plate { position:absolute; left:0; top:0; width:1080px; height:1920px; object-fit:cover; }
+      .shot { position:absolute; inset:0; background-size:cover; background-position:center; }
+
+      /* ── type ───────────────────────────────────────────── */
+      .slab {
+        position:absolute; left:56px; right:56px;
+        font-family:var(--display); text-transform:uppercase;
+        font-size:150px; line-height:1.04; letter-spacing:-0.005em;
+        color:var(--ink-900);
+      }
+      /* highlight fills its own line box only — no vertical spread, so a block
+         never bleeds up into the line above it */
+      .slab .hl, .slab .hlm {
+        padding:0 .07em; box-decoration-break:clone; -webkit-box-decoration-break:clone;
+      }
+      .slab .hl { background:var(--mech); }
+      .slab .hlm { background:var(--sent); color:var(--paper-100); }
+      /* type sitting over a video plate needs its own ground — the shelter
+         interior is near-black and swallows ink-900 type */
+      .onvid {
+        background:var(--paper-200);
+        border:var(--border-box) solid var(--ink-900);
+        box-shadow:10px 10px 0 var(--ink-900);
+        padding:26px 22px;
+      }
+      .lab {
+        position:absolute; font-family:var(--mono); font-weight:700;
+        font-size:26px; letter-spacing:.10em; text-transform:uppercase; color:var(--ink-900);
+      }
+      /* mono label over a video plate — same treatment, chip-sized */
+      .lab.chip {
+        background:var(--paper-200); border:var(--border-box) solid var(--ink-900);
+        box-shadow:6px 6px 0 var(--ink-900); padding:12px 16px;
+      }
+      .cap {
+        position:absolute; left:56px; right:56px;
+        font-family:var(--sans); font-weight:700; font-size:52px; line-height:1.22;
+        color:var(--ink-900);
+      }
+      .box { border:var(--border-box) solid var(--ink-900); background:var(--paper-100); box-shadow:4px 4px 0 var(--ink-900); }
+
+      /* ── S2 cards ───────────────────────────────────────── */
+      .card {
+        position:absolute; left:50%; top:50%; width:520px; height:660px; margin:-330px 0 0 -260px;
+        border:var(--border-box) solid var(--ink-900); background:var(--paper-100);
+        box-shadow:8px 8px 0 var(--ink-900); overflow:hidden;
+      }
+      .card .hd { font-family:var(--mono); font-weight:700; font-size:24px; letter-spacing:.10em;
+        text-transform:uppercase; padding:16px 18px; border-bottom:var(--border-box) solid var(--ink-900);
+        background:var(--paper-300); }
+      .card .bd { padding:20px 18px; font-family:var(--sans); font-size:30px; line-height:1.35; }
+      .card .thumb { position:absolute; left:0; right:0; bottom:0; height:330px; background-size:cover; background-position:center; border-top:var(--border-box) solid var(--ink-900); }
+
+      /* ── S6/S7 feed ─────────────────────────────────────── */
+      #feedwin { position:absolute; left:130px; top:250px; width:820px; height:1420px; overflow:hidden;
+        border:var(--border-heavy) solid var(--ink-900); background:var(--paper-100); }
+      #feedtrack { position:absolute; left:0; top:0; width:820px; }
+      #feedtrack div { width:820px; height:1467px; background-size:100% 100%; }
+      .arrow { position:absolute; }
+      .arrow path { fill:none; stroke:var(--sent); stroke-width:7; stroke-linecap:round; stroke-linejoin:round; }
+      .arrow .hd2 { fill:var(--sent); stroke:none; }
+      .atag { position:absolute; font-family:var(--mono); font-weight:700; font-size:30px;
+        letter-spacing:.06em; color:var(--sent); text-transform:uppercase; white-space:nowrap; }
+
+      /* ── S9 progress ────────────────────────────────────── */
+      #bar { position:absolute; left:110px; top:1180px; width:860px; height:74px;
+        border:var(--border-heavy) solid var(--ink-900); background:var(--paper-100); overflow:hidden; }
+      #barfill { position:absolute; left:0; top:0; bottom:0; width:860px; background:var(--mech);
+        transform-origin:left center; }
+      #barpct { position:absolute; left:110px; top:1274px; font-family:var(--mono); font-weight:700;
+        font-size:34px; letter-spacing:.10em; color:var(--ink-900); }
+
+      /* ── objects ────────────────────────────────────────── */
+      .obj { position:absolute; left:50%; top:50%; background-size:contain; background-repeat:no-repeat;
+        background-position:center; }
+      #phone { width:1080px; height:1920px; margin:-960px 0 0 -540px; }
+      #receipt { width:1080px; height:1920px; margin:-960px 0 0 -540px; }
+      #cut { width:1080px; height:1920px; margin:-960px 0 0 -540px; }
+
+      /* ── fx ─────────────────────────────────────────────── */
+      #grain { opacity:.12; mix-blend-mode:multiply; }
+      #edge { border:14px solid var(--ink-900); box-sizing:border-box; }
+      #flash { background:var(--paper-100); opacity:0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-width="1080" data-height="1920" data-duration="60">
+      <audio id="track" src="audio/master.wav" data-start="0" data-duration="60" data-track-index="15" data-volume="1"></audio>
+
+      <!-- ground sits BELOW the video plates; the scenes sit above them -->
+      <div id="ground" class="clip" data-start="0" data-duration="60" data-track-index="0">
+        <div id="paper" class="fill"></div>
+        <div id="grid" class="fill"></div>
+        <div id="halftone" class="fill"></div>
+      </div>
+
+      <video id="v1" class="plate" src="assets/prepped/vid-01.mp4" data-start="0" data-duration="4.6" data-track-index="11" muted playsinline></video>
+      <video id="v3" class="plate" src="assets/prepped/vid-03-ext.mp4" data-start="43.8" data-duration="5.2" data-track-index="12" muted playsinline></video>
+      <video id="v4" class="plate" src="assets/prepped/vid-04-ext.mp4" data-start="48.8" data-duration="11.2" data-track-index="13" muted playsinline></video>
+
+      <div id="shake" class="fill">
+        <!-- S1 · the stop -->
+        <section id="s1" class="clip" data-start="0" data-duration="4.3" data-track-index="1">
+          <div id="s1lab" class="lab chip" style="left:56px; top:150px">01 // The Stop</div>
+          <div id="s1t" class="slab onvid" style="top:1290px">You've been<br />manifesting<br /><span class="hl">for two years</span></div>
+        </section>
+
+        <!-- S2 · the evidence stacks up -->
+        <section id="s2" class="clip" data-start="4.1" data-duration="4.8" data-track-index="2">
+          <div id="c1" class="card"><div class="hd">Vision Board</div><div class="thumb" style="background-image:url('assets/prepped/img-07-feed-a.png')"></div></div>
+          <div id="c2" class="card"><div class="hd">Morning Routine</div><div class="bd">05:00 — wake<br />05:10 — journal<br />05:25 — affirmations<br />05:40 — visualise</div></div>
+          <div id="c3" class="card"><div class="hd">Saved · 1,847</div><div class="thumb" style="background-image:url('assets/prepped/img-08-feed-b.png')"></div></div>
+          <div id="c4" class="card"><div class="hd">Course · Paid</div><div class="bd">Manifest Your<br />Dream Life<br /><br />$497.00</div></div>
+        </section>
+
+        <!-- S3 · what you don't have -->
+        <section id="s3" class="clip" data-start="8.7" data-duration="2.5" data-track-index="1">
+          <div id="s3t" class="slab" style="top:470px; text-align:center; font-size:172px">The thing</div>
+          <div id="cut" class="obj" style="background-image:url('assets/prepped/img-04-char-cutout.png')"></div>
+        </section>
+
+        <!-- S4 · it works -->
+        <section id="s4" class="clip" data-start="11.0" data-duration="3.8" data-track-index="2">
+          <div id="s4shot" class="shot" style="background-image:url('assets/prepped/img-05-face-closeup.png')"></div>
+          <div id="s4a" class="slab" style="top:130px">It <span class="hl">works</span></div>
+          <div id="s4b" class="slab" style="top:1420px; font-size:112px">That's the<br /><span class="hlm">problem</span></div>
+        </section>
+
+        <!-- S5 · they sell it to you -->
+        <section id="s5" class="clip" data-start="14.6" data-duration="5.2" data-track-index="1">
+          <div id="phone" class="obj" style="background-image:url('assets/prepped/img-06-phone-object.png')"></div>
+          <div id="s5lab" class="lab" style="left:56px; top:170px">Belief Technology</div>
+          <div id="s5t" class="cap" style="top:1560px">Attention shapes outcome. So attention is the product.</div>
+        </section>
+
+        <!-- S6 · somebody else's vision board -->
+        <section id="s6" class="clip" data-start="19.6" data-duration="3.6" data-track-index="2">
+          <div id="feedwin"><div id="feedtrack">
+            <div style="background-image:url('assets/prepped/img-07-feed-a.png')"></div>
+            <div style="background-image:url('assets/prepped/img-08-feed-b.png')"></div>
+            <div style="background-image:url('assets/prepped/img-07-feed-a.png')"></div>
+            <div style="background-image:url('assets/prepped/img-08-feed-b.png')"></div>
+          </div></div>
+          <div id="s6lab" class="lab" style="left:130px; top:180px">Somebody else's board</div>
+          <svg id="ar1" class="arrow" style="left:60px; top:520px; width:300px; height:200px" viewBox="0 0 300 200"><path d="M14 172 C 96 168, 150 120, 196 62" /><path class="hd2" d="M196 62 l 30 -22 l -6 36 z" /></svg>
+          <div id="at1" class="atag" style="left:44px; top:700px">not yours</div>
+          <svg id="ar2" class="arrow" style="left:740px; top:1000px; width:300px; height:220px" viewBox="0 0 300 220"><path d="M286 196 C 210 190, 150 140, 104 78" /><path class="hd2" d="M104 78 l -32 -20 l 8 36 z" /></svg>
+          <div id="at2" class="atag" style="left:770px; top:1214px">not yours</div>
+        </section>
+
+        <!-- S7 · a thousand lives a day -->
+        <section id="s7" class="clip" data-start="23.0" data-duration="3.8" data-track-index="1">
+          <div id="s7n" class="slab" style="top:300px; font-size:230px; text-align:center">1,000</div>
+          <div id="s7lab" class="lab" style="left:0; right:0; top:700px; text-align:center">lives per day</div>
+          <div id="s7t" class="slab" style="top:1360px; text-align:center; font-size:120px">None of<br /><span class="hlm">them yours</span></div>
+        </section>
+
+        <!-- S8 · manifested through -->
+        <section id="s8" class="clip" data-start="26.6" data-duration="4.0" data-track-index="2">
+          <div id="s8win" style="position:absolute; left:0; top:0; width:1080px; height:1920px; overflow:hidden">
+            <div id="s8track" style="position:absolute; left:130px; top:0; width:820px">
+              <div style="width:820px;height:1467px;background-size:100% 100%;background-image:url('assets/prepped/img-08-feed-b.png')"></div>
+              <div style="width:820px;height:1467px;background-size:100% 100%;background-image:url('assets/prepped/img-07-feed-a.png')"></div>
+            </div>
+          </div>
+          <div id="s8cut" class="obj" style="background-image:url('assets/prepped/img-04-char-cutout.png'); width:1080px;height:1920px;margin:-960px 0 0 -540px"></div>
+          <div id="s8t" class="slab" style="top:1500px; font-size:104px">Manifested<br /><span class="hlm">through</span></div>
+        </section>
+
+        <!-- S9 · almost. forever. -->
+        <section id="s9" class="clip" data-start="30.4" data-duration="6.5" data-track-index="1">
+          <div id="s9lab" class="lab" style="left:110px; top:1090px">Loading your future</div>
+          <div id="bar"><div id="barfill"></div></div>
+          <div id="barpct">97%</div>
+          <div id="s9a" class="slab" style="top:380px; font-size:170px">Almost</div>
+          <div id="s9b" class="slab" style="top:620px; font-size:170px">Almost</div>
+          <div id="s9c" class="slab" style="top:860px; font-size:170px"><span class="hlm">Forever</span></div>
+        </section>
+
+        <!-- S10 · a cost -->
+        <section id="s10" class="clip" data-start="36.7" data-duration="7.3" data-track-index="2">
+          <div id="receipt" class="obj" style="background-image:url('assets/prepped/img-09-receipt.png')"></div>
+          <div id="s10lab" class="lab" style="left:56px; top:150px">02 // The Price</div>
+          <div id="s10t" class="slab" style="top:200px; font-size:128px">A wish and a plan<br />differ by <span class="hl">a cost</span></div>
+          <div id="ct1" class="atag" style="left:70px; top:1180px; font-size:34px">Hours</div>
+          <div id="ct2" class="atag" style="left:70px; top:1300px; font-size:34px">Discomfort</div>
+          <div id="ct3" class="atag" style="left:70px; top:1420px; font-size:34px">Something you give up</div>
+          <svg id="ar3" class="arrow" style="left:330px; top:1140px; width:360px; height:120px" viewBox="0 0 360 120"><path d="M8 96 C 110 92, 210 70, 300 34" /><path class="hd2" d="M300 34 l 36 -12 l -18 34 z" /></svg>
+        </section>
+
+        <!-- S11 · it starts being a life -->
+        <section id="s11" class="clip" data-start="43.8" data-duration="5.2" data-track-index="1">
+          <div id="s11t" class="slab onvid" style="top:1380px; font-size:116px">It starts<br />being <span class="hlm">a life</span></div>
+        </section>
+
+        <!-- S12 · the bus -->
+        <section id="s12" class="clip" data-start="48.8" data-duration="11.2" data-track-index="2">
+          <div id="s12a" class="cap onvid" style="top:200px; font-size:62px">You can visualise the bus all day.</div>
+          <div id="s12b" class="slab onvid" style="top:1280px; font-size:104px">It only stops<br />if you're <span class="hlm">standing there</span></div>
+        </section>
+      </div>
+
+      <div id="fx" class="clip" data-start="0" data-duration="60" data-track-index="9" data-layout-allow-occlusion>
+        <svg id="grain" class="fill" width="1080" height="1920">
+          <filter id="gf" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="5" /></filter>
+          <rect width="1080" height="1920" filter="url(#gf)" />
+        </svg>
+        <div id="flash" class="fill" data-layout-allow-occlusion></div>
+        <div id="edge" class="fill"></div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const DUR = 60;
+      const E = "power3.out", EX = "power2.in";
+      const reps = (span, cycle) => Math.max(0, Math.floor(span / cycle) - 1);
+
+      function scene(sel, start, dur, fin, fout) {
+        fin = fin === undefined ? 0.22 : fin;
+        fout = fout === undefined ? 0.28 : fout;
+        tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: fin, ease: "power2.out" }, start);
+        tl.to(sel, { opacity: 0, duration: fout, ease: EX }, start + dur - fout);
+      }
+      // slab entrance — hard, mechanical, Phoenix timing
+      function slab(sel, t, out, fromY) {
+        tl.fromTo(sel, { opacity: 0, y: fromY === undefined ? 60 : fromY, scaleY: 0.86 },
+          { opacity: 1, y: 0, scaleY: 1, duration: 0.32, ease: E }, t);
+        if (out) tl.to(sel, { opacity: 0, y: -28, duration: 0.22, ease: EX }, out);
+      }
+      function lab(sel, t, out) {
+        tl.fromTo(sel, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.28, ease: E }, t);
+        if (out) tl.to(sel, { opacity: 0, duration: 0.2, ease: EX }, out);
+      }
+
+      /* ── ground ─────────────────────────────────────────── */
+      tl.fromTo("#grid", { opacity: 0.18 }, { opacity: 0.62, duration: 22, ease: "none" }, 8);
+      tl.to("#grid", { opacity: 0.16, duration: 3.2, ease: E }, 44.0);
+      tl.fromTo("#halftone", { opacity: 0.34 }, { opacity: 0.62, duration: 26, ease: "none" }, 8);
+      tl.to("#halftone", { opacity: 0.3, duration: 3.2, ease: E }, 44.0);
+      tl.fromTo("#grain", { opacity: 0.1 }, { opacity: 0.17, duration: 0.5, repeat: reps(DUR, 1.0), yoyo: true, ease: "none" }, 0);
+
+      /* camera shake — ramps with the machine, dies at the turn */
+      tl.set("#shake", { transformOrigin: "50% 50%" }, 0);
+      tl.fromTo("#shake", { x: 0, y: 0 },
+        { x: 3, y: -3, duration: 0.09, repeat: reps(6.0, 0.18), yoyo: true, ease: "none" }, 24.0);
+      tl.fromTo("#shake", { x: -6, y: 5 },
+        { x: 7, y: -6, duration: 0.07, repeat: reps(6.4, 0.14), yoyo: true, ease: "none" }, 30.4);
+      tl.to("#shake", { x: 0, y: 0, duration: 0.3, ease: E }, 36.8);
+
+      /* ── S1 ─────────────────────────────────────────────── */
+      scene("#s1", 0, 4.3, 0.5, 0.3);
+      lab("#s1lab", 0.5, 3.9);
+      slab("#s1t", 1.95, 3.85, 70);
+      tl.fromTo("#v1", { scale: 1.06 }, { scale: 1.0, duration: 4.6, ease: "none" }, 0);
+
+      /* ── S2 · cards deal in ─────────────────────────────── */
+      scene("#s2", 4.1, 4.8, 0.2, 0.3);
+      tl.set("#c1", { rotation: -9, x: -18 }, 0);
+      tl.set("#c2", { rotation: 5, x: 14 }, 0);
+      tl.set("#c3", { rotation: -4, x: -8 }, 0);
+      tl.set("#c4", { rotation: 8, x: 22 }, 0);
+      [["#c1", 4.25], ["#c2", 4.95], ["#c3", 5.75], ["#c4", 6.6]].forEach(function (p) {
+        tl.fromTo(p[0], { opacity: 0, y: 900, scale: 1.3 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: E }, p[1]);
+      });
+      tl.to("#c1, #c2, #c3, #c4", { y: -60, duration: 1.4, ease: "power1.inOut" }, 7.2);
+
+      /* ── S3 · the thing, behind him ─────────────────────── */
+      scene("#s3", 8.7, 2.5, 0.2, 0.22);
+      tl.fromTo("#s3t", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.45, ease: E }, 8.85);
+      tl.fromTo("#cut", { opacity: 0, y: 120, scale: 1.14 },
+        { opacity: 1, y: 0, scale: 1.04, duration: 0.75, ease: E }, 9.0);
+      tl.to("#cut", { scale: 1.1, duration: 1.4, ease: "power1.out" }, 9.75);
+
+      /* ── S4 · snap zoom, IT WORKS ───────────────────────── */
+      scene("#s4", 11.0, 3.8, 0.12, 0.25);
+      tl.fromTo("#s4shot", { scale: 1.9 }, { scale: 1.12, duration: 0.5, ease: "power4.out" }, 11.0);
+      tl.to("#s4shot", { scale: 1.2, duration: 3.1, ease: "none" }, 11.6);
+      slab("#s4a", 11.3, 12.6);
+      slab("#s4b", 12.75, 14.6, 80);
+      tl.set("#flash", { opacity: 0 }, 0);
+      tl.to("#flash", { opacity: 0.85, duration: 0.04, ease: "none" }, 10.98);
+      tl.to("#flash", { opacity: 0, duration: 0.22, ease: EX }, 11.02);
+      tl.to("#flash", { opacity: 0.5, duration: 0.04, ease: "none" }, 12.73);
+      tl.to("#flash", { opacity: 0, duration: 0.18, ease: EX }, 12.77);
+
+      /* ── S5 · phone at camera ───────────────────────────── */
+      scene("#s5", 14.6, 5.2, 0.18, 0.3);
+      tl.fromTo("#phone", { scale: 0.2, rotation: -16, opacity: 0 },
+        { scale: 0.62, rotation: -6, opacity: 1, duration: 0.9, ease: E }, 14.65);
+      tl.to("#phone", { scale: 3.6, rotation: 4, duration: 3.1, ease: "power2.in" }, 16.3);
+      tl.to("#phone", { opacity: 0, duration: 0.4, ease: "none" }, 19.2);
+      lab("#s5lab", 14.9, 19.2);
+      tl.fromTo("#s5t", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: E }, 15.4);
+      tl.to("#s5t", { opacity: 0, duration: 0.3, ease: EX }, 19.1);
+
+      /* ── S6 · the feed, annotated ───────────────────────── */
+      scene("#s6", 19.6, 3.6, 0.2, 0.25);
+      tl.fromTo("#feedtrack", { y: 0 }, { y: -2934, duration: 3.6, ease: "none" }, 19.6);
+      lab("#s6lab", 19.8, 22.9);
+      tl.fromTo("#ar1", { opacity: 0, scale: 0.7, rotation: -8 },
+        { opacity: 1, scale: 1, rotation: 0, duration: 0.26, ease: E }, 20.5);
+      tl.fromTo("#at1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.22, ease: E }, 20.65);
+      tl.fromTo("#ar2", { opacity: 0, scale: 0.7, rotation: 8 },
+        { opacity: 1, scale: 1, rotation: 0, duration: 0.26, ease: E }, 21.5);
+      tl.fromTo("#at2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.22, ease: E }, 21.65);
+      tl.to("#ar1, #at1, #ar2, #at2", { opacity: 0, duration: 0.22, ease: EX }, 22.9);
+
+      /* ── S7 · a thousand lives ──────────────────────────── */
+      scene("#s7", 23.0, 3.8, 0.15, 0.25);
+      tl.fromTo("#s7n", { opacity: 0, scale: 1.6, y: 40 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: E }, 23.1);
+      tl.to("#s7n", { scale: 1.06, duration: 3.0, ease: "none" }, 23.6);
+      lab("#s7lab", 23.5, 26.5);
+      slab("#s7t", 24.5, 26.6, 70);
+
+      /* ── S8 · manifested through ────────────────────────── */
+      scene("#s8", 26.6, 4.0, 0.2, 0.28);
+      tl.fromTo("#s8track", { y: -200 }, { y: -1800, duration: 4.0, ease: "none" }, 26.6);
+      tl.fromTo("#s8cut", { opacity: 0 }, { opacity: 0.92, duration: 0.5, ease: E }, 26.7);
+      tl.to("#s8cut", { scale: 1.08, duration: 3.6, ease: "none" }, 26.8);
+      slab("#s8t", 27.3, 30.3, 60);
+
+      /* ── S9 · almost, forever ───────────────────────────── */
+      scene("#s9", 30.4, 6.5, 0.18, 0.3);
+      tl.fromTo("#barfill", { scaleX: 0 }, { scaleX: 0.97, duration: 1.6, ease: "power3.out" }, 30.5);
+      tl.to("#barfill", { scaleX: 0.972, duration: 4.4, ease: "none" }, 32.1);
+      lab("#s9lab", 30.6, 36.5);
+      tl.fromTo("#barpct", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 31.0);
+      tl.to("#barpct", { opacity: 0, duration: 0.25 }, 36.5);
+      slab("#s9a", 31.4);
+      slab("#s9b", 32.6);
+      slab("#s9c", 34.0);
+      tl.to("#s9a, #s9b, #s9c", { opacity: 0, duration: 0.25, stagger: 0.05, ease: EX }, 36.4);
+
+      /* ── S10 · the cost ─────────────────────────────────── */
+      scene("#s10", 36.7, 7.3, 0.25, 0.3);
+      tl.fromTo("#receipt", { opacity: 0, scale: 2.6, rotation: 12, y: -220 },
+        { opacity: 1, scale: 1.0, rotation: -3, y: 0, duration: 0.75, ease: E }, 36.85);
+      tl.to("#receipt", { rotation: 2, duration: 5.6, ease: "sine.inOut" }, 37.8);
+      lab("#s10lab", 36.9, 43.7);
+      slab("#s10t", 37.15, 40.4, 50);
+      tl.fromTo("#ar3", { opacity: 0, scale: 0.75 }, { opacity: 1, scale: 1, duration: 0.24, ease: E }, 40.7);
+      [["#ct1", 40.8], ["#ct2", 41.5], ["#ct3", 42.2]].forEach(function (p) {
+        tl.fromTo(p[0], { opacity: 0, x: -26 }, { opacity: 1, x: 0, duration: 0.24, ease: E }, p[1]);
+      });
+      tl.to("#ct1, #ct2, #ct3, #ar3", { opacity: 0, duration: 0.25, ease: EX }, 43.6);
+
+      /* ── S11 · the turn ─────────────────────────────────── */
+      scene("#s11", 43.8, 5.2, 0.35, 0.3);
+      slab("#s11t", 46.4, 48.7, 60);
+
+      /* ── S12 · the bus ──────────────────────────────────── */
+      scene("#s12", 48.8, 11.2, 0.3, 1.6);
+      tl.fromTo("#s12a", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 49.1);
+      tl.to("#s12a", { opacity: 0, duration: 0.4, ease: EX }, 51.6);
+      slab("#s12b", 51.9, 0, 70);
+      tl.to("#s12b", { opacity: 0, duration: 1.5, ease: EX }, 57.4);
+      tl.to("#edge", { opacity: 1, duration: 0.1 }, 0);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
