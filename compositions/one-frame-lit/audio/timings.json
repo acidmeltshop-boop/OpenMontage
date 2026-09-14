@@ -1,0 +1,118 @@
+{
+  "length_scale": 1.08,
+  "total": 50.73,
+  "lines": [
+    {
+      "id": "l01",
+      "text": "You think you're trapped inside this moment.",
+      "start": 0.0,
+      "dur": 2.048,
+      "end": 2.048,
+      "gap": 0.25
+    },
+    {
+      "id": "l02",
+      "text": "That's the whole malfunction.",
+      "start": 2.298,
+      "dur": 1.536,
+      "end": 3.834,
+      "gap": 0.55
+    },
+    {
+      "id": "l03",
+      "text": "You've mistaken a single frame for the entire reel.",
+      "start": 4.384,
+      "dur": 2.48,
+      "end": 6.864,
+      "gap": 0.7
+    },
+    {
+      "id": "l04",
+      "text": "Contraction is the physics of loss. Not proof that something's wrong with you.",
+      "start": 7.564,
+      "dur": 4.182,
+      "end": 11.746,
+      "gap": 0.6
+    },
+    {
+      "id": "l05",
+      "text": "The low isn't a failure. It's a coordinate.",
+      "start": 12.346,
+      "dur": 2.374,
+      "end": 14.72,
+      "gap": 0.45
+    },
+    {
+      "id": "l06",
+      "text": "You cannot draw a wave with only its peaks.",
+      "start": 15.17,
+      "dur": 2.448,
+      "end": 17.618,
+      "gap": 0.3
+    },
+    {
+      "id": "l07",
+      "text": "The trough is what gives the peak its height.",
+      "start": 17.918,
+      "dur": 2.192,
+      "end": 20.11,
+      "gap": 0.55
+    },
+    {
+      "id": "l08",
+      "text": "The depth isn't happening to the arc. The depth is the arc.",
+      "start": 20.66,
+      "dur": 3.382,
+      "end": 24.042,
+      "gap": 0.7
+    },
+    {
+      "id": "l09",
+      "text": "You are not the frame you're on. You're the awareness watching it.",
+      "start": 24.742,
+      "dur": 3.014,
+      "end": 27.756,
+      "gap": 0.45
+    },
+    {
+      "id": "l10",
+      "text": "The reel keeps moving whether you grip this frame or not.",
+      "start": 28.206,
+      "dur": 2.72,
+      "end": 30.926,
+      "gap": 0.7
+    },
+    {
+      "id": "l11",
+      "text": "Scarcity is a search function. It scans for not enough, and finds it. Every time.",
+      "start": 31.626,
+      "dur": 5.052,
+      "end": 36.678,
+      "gap": 0.6
+    },
+    {
+      "id": "l12",
+      "text": "Ask only what's true in the three feet around your body. Breath. Weight. Sound.",
+      "start": 37.278,
+      "dur": 5.122,
+      "end": 42.4,
+      "gap": 0.7
+    },
+    {
+      "id": "l13",
+      "text": "This isn't your permanent address. It's the compression phase.",
+      "start": 43.1,
+      "dur": 3.638,
+      "end": 46.738,
+      "gap": 0.45
+    },
+    {
+      "id": "l14",
+      "text": "Your only job is to stop adding weight. And let it complete.",
+      "start": 47.188,
+      "dur": 3.542,
+      "end": 50.73,
+      "gap": 0.0
+    }
+  ]
+}
