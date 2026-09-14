@@ -1,6 +1,6 @@
 # THE STOP — script & scene plan
 
-60s · 16:9 · modern manifestation
+60s · **9:16 vertical, 1080×1920** · modern manifestation
 
 ## The angle
 
@@ -74,3 +74,22 @@ claim, the reversal, the landing. Used everywhere it would read as a template.
 **Color is a single event.** The film is monochrome for 48 seconds so that one accent
 at S10 does real work. This is the Phoenix Dialectic insertion point — a one-token
 change once the design system is readable.
+
+## Vertical notes
+
+The move to 9:16 helps this piece more than it costs it:
+
+- **The feed sequence becomes literal.** A vertical feed inside a vertical frame is
+  the actual object being critiqued, not a depiction of it. S6/S7 now fill the frame
+  edge to edge exactly as the real thing does.
+- **The bus towers instead of crossing.** In 16:9 the bus would have entered from the
+  side; vertically it arrives front-on and looms. The landing gets bigger.
+- **Giant type gets fewer words per line.** Vertical wants 2–4 words stacked, not a
+  sentence across. The three type moments (S1, S4, S11) are written short enough to
+  survive that — the longest, S11's closing line, breaks cleanly into stacked phrases.
+- **The close-up gains.** A face filling a vertical frame is more confrontational than
+  the same face in a letterbox.
+
+The one real cost: the supplied 16:9 hero can't be the on-screen plate, so it is
+demoted to style/character reference and the opening shot is regenerated vertically
+as `img-02`.
