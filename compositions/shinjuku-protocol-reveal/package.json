@@ -1,0 +1,19 @@
+{
+  "name": "shinjuku-protocol-reveal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.40 preview",
+    "check": "npx --yes hyperframes@0.8.40 check",
+    "render": "npx --yes hyperframes@0.8.40 render"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.14.2"
+  },
+  "private": true,
+  "type": "module"
+}

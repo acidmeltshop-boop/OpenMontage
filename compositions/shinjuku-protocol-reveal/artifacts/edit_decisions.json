@@ -1,0 +1,205 @@
+{
+  "version": "1.0",
+  "cuts": [
+    {
+      "id": "s01",
+      "source": "hf_composition",
+      "in_seconds": 0.0,
+      "out_seconds": 0.583,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s02",
+      "source": "hf_composition",
+      "in_seconds": 0.583,
+      "out_seconds": 1.167,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s03",
+      "source": "hf_composition",
+      "in_seconds": 1.167,
+      "out_seconds": 1.708,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s04",
+      "source": "hf_composition",
+      "in_seconds": 1.708,
+      "out_seconds": 2.25,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s05",
+      "source": "hf_composition",
+      "in_seconds": 2.25,
+      "out_seconds": 3.0,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s06",
+      "source": "hf_composition",
+      "in_seconds": 3.0,
+      "out_seconds": 3.583,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s07",
+      "source": "hf_composition",
+      "in_seconds": 3.583,
+      "out_seconds": 4.292,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s08",
+      "source": "hf_composition",
+      "in_seconds": 4.292,
+      "out_seconds": 4.875,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s09",
+      "source": "hf_composition",
+      "in_seconds": 4.875,
+      "out_seconds": 5.583,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s10",
+      "source": "hf_composition",
+      "in_seconds": 5.583,
+      "out_seconds": 6.292,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s11",
+      "source": "hf_composition",
+      "in_seconds": 6.292,
+      "out_seconds": 7.5,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "id": "s12",
+      "source": "hf_composition",
+      "in_seconds": 7.5,
+      "out_seconds": 10.0,
+      "layer": "primary",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    }
+  ],
+  "renderer_family": "animation-first",
+  "render_runtime": "hyperframes",
+  "composition_mode": "atelier",
+  "bespoke": {
+    "entry": "projects/shinjuku-protocol-reveal/hf/index.html",
+    "composition_id": "shinjuku",
+    "art_direction": "projects/shinjuku-protocol-reveal/hf/art-direction.md"
+  },
+  "audio": {
+    "narration": {
+      "segments": []
+    },
+    "music": {
+      "asset_id": "bed_wav",
+      "volume": 1.0,
+      "fade_in_seconds": 0.0,
+      "fade_out_seconds": 0.35,
+      "ducking": false
+    },
+    "sfx": []
+  },
+  "subtitles": {
+    "enabled": false
+  },
+  "transitions": [
+    {
+      "at_seconds": 0.583,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 1.167,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 1.708,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 2.25,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 3.0,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 3.583,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 4.292,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 4.875,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 5.583,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 6.292,
+      "type": "cut",
+      "duration_seconds": 0.0
+    },
+    {
+      "at_seconds": 7.5,
+      "type": "cut",
+      "duration_seconds": 0.0
+    }
+  ],
+  "metadata": {
+    "proposal_render_runtime": "hyperframes",
+    "fps": 24,
+    "resolution": "1920x1080",
+    "total_frames": 240,
+    "workspace_path": "projects/shinjuku-protocol-reveal/hf",
+    "audio_owned_by_composition": true,
+    "audio_note": "The bed is an <audio> element at the composition root; HyperFrames owns playback and muxes it.",
+    "cut_note": "Every cut is a hard cut (duration 0) on an audio transient. All motion is intra-shot. One transition family by design.",
+    "runtime_swap": "none \u2014 hyperframes locked at proposal (d-003) and carried through unchanged"
+  }
+}

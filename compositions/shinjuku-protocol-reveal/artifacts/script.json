@@ -1,0 +1,209 @@
+{
+  "version": "1.0",
+  "title": "SHINJUKU PROTOCOL \u2014 Press Sheet",
+  "total_duration_seconds": 10.0,
+  "sections": [
+    {
+      "id": "s01",
+      "label": "BLANK STOCK",
+      "text": "SHEET 01 \u00b7 175 LPI \u00b7 C-41",
+      "start_seconds": 0.0,
+      "end_seconds": 0.583,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Bone stock. Crop marks snap to four corners in sequence. Colour-calibration bar draws L\u2192R along the top edge. Margin micro-type sets.",
+          "timestamp_seconds": 0.0
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "label": "KEY PLATE",
+      "text": "SHINJUKU",
+      "start_seconds": 0.583,
+      "end_seconds": 1.167,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Black key plate slams down: type only, huge, bleeding both edges. Registration crosshairs flash once.",
+          "timestamp_seconds": 0.583
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "label": "MISREGISTER",
+      "text": "PLATE 2/4 \u00b7 CRIMSON",
+      "start_seconds": 1.167,
+      "end_seconds": 1.708,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Crimson plate drops 14px off-register. Ghosted double-edge under the black. Jitters twice.",
+          "timestamp_seconds": 1.167
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "label": "SNAP",
+      "text": "PROTOCOL",
+      "start_seconds": 1.708,
+      "end_seconds": 2.25,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Plate registers with a hard click. A crimson bar rockets across the frame and stops dead. PROTOCOL lands beneath SHINJUKU.",
+          "timestamp_seconds": 1.708
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "label": "WINDOW OPENS",
+      "text": "IMAGE PLATE 3/4",
+      "start_seconds": 2.25,
+      "end_seconds": 3.0,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Roller wipe cuts an image-window into the sheet. A band only \u2014 the hand, the glass. Halftone dots at the window edge.",
+          "timestamp_seconds": 2.25
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "label": "DUOTONE FLIP",
+      "text": "SEPARATION",
+      "start_seconds": 3.0,
+      "end_seconds": 3.583,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "The window flips full-colour \u2192 crimson/ink duotone \u2192 back, on the beat. Plate label ticks over.",
+          "timestamp_seconds": 3.0
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "label": "TYPE THROUGH ARTWORK",
+      "text": "SHINJUKU",
+      "start_seconds": 3.583,
+      "end_seconds": 4.292,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "SIGNATURE SHOT. Full-bleed SHINJUKU, letterforms filled with the poster artwork, everything else bone. Letters track out slowly.",
+          "timestamp_seconds": 3.583
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "label": "COLD INVERSION",
+      "text": "35\u00b041'N 139\u00b046'E",
+      "start_seconds": 4.292,
+      "end_seconds": 4.875,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Ink field. Cold cyan reticle, grid and coordinates draw on. Small image window centred.",
+          "timestamp_seconds": 4.292
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "label": "TRIPTYCH",
+      "text": "FILM C-41 / SHEET 02 / NO WITNESS",
+      "start_seconds": 4.875,
+      "end_seconds": 5.583,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Three vertical panels slide in at different speeds \u2014 the three poster treatments. Rotated side-bar type on each.",
+          "timestamp_seconds": 4.875
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "label": "ROLLER WIPE",
+      "text": "PROTOCOL",
+      "start_seconds": 5.583,
+      "end_seconds": 6.292,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "A hard-edged crimson roller sweeps across, leaving PROTOCOL knocked out in white. Halftone density ramps under it.",
+          "timestamp_seconds": 5.583
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "label": "ASSEMBLY",
+      "text": "2023.04.29",
+      "start_seconds": 6.292,
+      "end_seconds": 7.5,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "All four plates converge on four beats \u2014 stock, key, crimson, image. Barcode draws in.",
+          "timestamp_seconds": 6.292
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "label": "LOCKUP",
+      "text": "SHINJUKU PROTOCOL",
+      "start_seconds": 7.5,
+      "end_seconds": 10.0,
+      "speaker_directions": "No narration. `text` is the on-screen copy for this beat, not spoken words.",
+      "enhancement_cues": [
+        {
+          "type": "animation",
+          "description": "Dead still. Full poster lockup: crop marks, colour bar, barcode, date, coordinates, \u25ba\u25ba\u25ba. One halftone shimmer settles over 0.4s, then nothing moves.",
+          "timestamp_seconds": 7.5
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "narration": "none \u2014 zero dialogue, matching the reference",
+    "audio_bed": "locally synthesised percussive design bed; cuts land on its transients",
+    "on_screen_text_policy": "All text is design, not caption. Max 8 words per beat. Every string is either lifted from the supplied posters or is genuine press nomenclature.",
+    "cut_grid_fps": 24,
+    "total_frames": 240,
+    "beat_grid_seconds": [
+      0.0,
+      0.583,
+      1.167,
+      1.708,
+      2.25,
+      3.0,
+      3.583,
+      4.292,
+      4.875,
+      5.583,
+      6.292,
+      7.5
+    ],
+    "pacing_note": "12 shots, avg 0.79s, longest 2.50s (the lockup) \u2014 deliberately matched to the reference's 0.83s / 2.50s profile."
+  }
+}

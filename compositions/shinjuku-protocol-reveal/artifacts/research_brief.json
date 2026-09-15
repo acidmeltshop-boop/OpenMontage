@@ -1,0 +1,267 @@
+{
+  "version": "1.0",
+  "topic": "A 10-second character-reveal title trailer in the style of the supplied kinetic-typography anime reveal, art-directed from three supplied neo-noir Tokyo crime posters ('Shinjuku Protocol' / 'Dark Yakuza')",
+  "research_date": "2026-09-15",
+  "landscape": {
+    "existing_content": [
+      {
+        "title": "Kinetic Typography: The Complete Guide to Motion Text Design in 2026",
+        "url": "https://www.ikagency.com/graphic-design-typography/kinetic-typography/",
+        "source": "blog",
+        "angle": "Technique survey \u2014 mask reveal, per-character staggers, type-as-hero",
+        "what_it_covers": "Mask reveal (text hidden behind a shape that moves to expose it) as the dominant cinematic type technique for 2026",
+        "what_it_misses": "Treats type and subject as separate layers; no guidance on depth-interleaving a subject WITH the letterforms",
+        "engagement_signal": "n/a"
+      },
+      {
+        "title": "Top 10 Design & Typography Trends for 2026 (Fontfabric)",
+        "url": "https://www.fontfabric.com/blog/10-design-trends-shaping-the-visual-typographic-landscape-in-2026/",
+        "source": "blog",
+        "angle": "Typography as the hero image; big, stacked, stretched, rotated type behaving like motion graphics",
+        "what_it_covers": "Studio Dumbar / OutSystems-style kinetic identity systems where type IS the image",
+        "what_it_misses": "Brand-identity framing, not narrative title-sequence framing",
+        "engagement_signal": "n/a"
+      },
+      {
+        "title": "5 Text Animation Secrets I Wish I Knew Before Starting Motion Design",
+        "url": "https://trydemotion.com/blog/text-animation-secrets",
+        "source": "blog",
+        "angle": "Per-character animation as the difference between text that reveals and text that performs",
+        "what_it_covers": "Ramp-up range selectors, cascading character reveals, position/scale/opacity animators",
+        "what_it_misses": "After Effects-centric; no code-runtime equivalent given",
+        "engagement_signal": "n/a"
+      },
+      {
+        "title": "kinetic-typography-skills (iart-ai)",
+        "url": "https://github.com/iart-ai/kinetic-typography-skills",
+        "source": "github",
+        "angle": "Beat-synced animated type for titles and lyric videos, packaged for coding agents",
+        "what_it_covers": "Beat-grid layout of type events; SplitText-style char/word/line staggers",
+        "what_it_misses": "No editorial/print vocabulary \u2014 no registration marks, halftone, or poster furniture",
+        "engagement_signal": "n/a"
+      },
+      {
+        "title": "Risograph Printing \u2014 registration, duotone and halftone practice",
+        "url": "https://jennacraiggraphicdesign.wordpress.com/2017/04/14/risograph-printing/",
+        "source": "blog",
+        "angle": "Print-production reality behind the 'riso' look",
+        "what_it_covers": "Registration spot colour marked with a crosshair; duotone built by superimposing one colour over another; the press generates the halftone",
+        "what_it_misses": "Static print only \u2014 no motion translation",
+        "engagement_signal": "n/a"
+      }
+    ],
+    "saturated_angles": [
+      "Glitch/datamosh cyberpunk title cards with Japanese katakana used as decoration",
+      "Slow neon-rain drone push down a Shinjuku street with a whispered voiceover",
+      "Generic 'BIG WORD, hard cut, BIG WORD' type reels with no print layer"
+    ],
+    "underserved_gaps": [
+      "Neo-noir/crime register done in the idol-trailer's rapid-fire graphic grammar \u2014 the two are almost never combined; crime titles default to slow and moody",
+      "Print-artefact motion design (registration marks, colour bars, halftone, barcode) driven by code rather than After Effects plugins",
+      "Stillness as the reveal: a subject who does NOT move while the layout violently does"
+    ]
+  },
+  "trending": {
+    "recent_developments": [
+      {
+        "headline": "Brutalist typography and kinetic type named a leading 2026 design direction",
+        "url": "https://fireart.studio/blog/the-best-web-design-trends/",
+        "date": "2026",
+        "relevance": "Confirms the heavy-grotesk, high-contrast, off-grid treatment in the reference is current, not retro"
+      }
+    ],
+    "active_discussions": [],
+    "timeliness_window": "evergreen"
+  },
+  "data_points": [
+    {
+      "claim": "The reference cuts 12 times in 10 seconds \u2014 72 cuts per minute, average shot 0.83s, shortest 0.62s, longest 2.5s (the final lockup).",
+      "source_url": "https://www.ikagency.com/graphic-design-typography/kinetic-typography/",
+      "source_name": "OpenMontage video_analyzer scene detection on the supplied file",
+      "credibility": "primary_source",
+      "surprise_factor": "notable"
+    },
+    {
+      "claim": "Mask reveal \u2014 text hidden behind a shape that moves to expose it \u2014 is the technique most associated with cinematic type in 2026.",
+      "source_url": "https://www.ikagency.com/graphic-design-typography/kinetic-typography/",
+      "source_name": "IK Agency, Kinetic Typography 2026",
+      "credibility": "secondary_source",
+      "surprise_factor": "expected"
+    },
+    {
+      "claim": "Per-character animation (each letter with its own timing) is what separates text that reveals from text that performs.",
+      "source_url": "https://trydemotion.com/blog/text-animation-secrets",
+      "source_name": "Demotion, Text Animation Secrets",
+      "credibility": "secondary_source",
+      "surprise_factor": "notable"
+    },
+    {
+      "claim": "In risograph practice the registration spot colour is literally a crosshair swatch, and duotone is made by superimposing one colour on another \u2014 the crop-mark/two-accent look in the supplied posters is a real press artefact, not decoration.",
+      "source_url": "https://jennacraiggraphicdesign.wordpress.com/2017/04/14/risograph-printing/",
+      "source_name": "Jenna Craig, Risograph Printing",
+      "credibility": "secondary_source",
+      "surprise_factor": "surprising"
+    },
+    {
+      "claim": "Professional anime trailers mix graphic design, silhouettes, photographic texture, particles and bold typography, transforming the composition every few moments.",
+      "source_url": "https://filmora.wondershare.com/video-editing/anime-character-design.html",
+      "source_name": "Filmora, anime character design",
+      "credibility": "anecdotal",
+      "surprise_factor": "expected"
+    },
+    {
+      "claim": "GSAP SplitText splits a heading into chars/words/lines for independently timed staggers; wrapping chars with overflow:hidden produces the masked slide-up reveal.",
+      "source_url": "https://gsapdemos.com/plugins/text/splittext",
+      "source_name": "GSAP SplitText demos",
+      "credibility": "primary_source",
+      "surprise_factor": "expected"
+    }
+  ],
+  "audience_insights": {
+    "common_questions": [
+      "How do you get a character to pass behind one letter and in front of the next?",
+      "How do you keep a 10-second cut-fest from reading as random noise?",
+      "How do you make code-rendered motion graphics look printed rather than screen-native?",
+      "How much can you cut before a shot stops registering at all?"
+    ],
+    "misconceptions": [
+      {
+        "myth": "A reveal trailer needs generated video footage.",
+        "reality": "The reference is almost entirely design layers \u2014 flat colour fields, type, particles and a cut-out subject. The only photographic elements are one macro eye and the character art. This is a composition job, not a video-generation job.",
+        "source": "agent vision pass over the reference keyframes"
+      },
+      {
+        "myth": "Faster cutting means more energy.",
+        "reality": "The reference spends 25% of its runtime on a single static end lockup. The cutting only reads as fast because it resolves into stillness.",
+        "source": "scene detection: longest shot 2.5s of 10s"
+      }
+    ],
+    "knowledge_level": "Design-literate short-form viewers. They will read 'movie poster' instantly from crop marks and a barcode, and they will notice if type and subject sit on the same flat layer.",
+    "pain_points": [
+      "Kinetic type reels all look alike because everyone assembles the same stock presets",
+      "Print texture applied as a full-frame overlay reads as a filter, not as printing"
+    ]
+  },
+  "angles_discovered": [
+    {
+      "name": "Cold Open \u2014 the procedural noir reveal",
+      "hook": "A man who never moves, in a layout that will not stop moving.",
+      "type": "contrarian",
+      "why_now": "Crime titles default to slow and moody; the reference's grammar is rapid-fire and graphic. Putting a motionless subject inside that grammar is the gap identified in landscape.underserved_gaps, and it is the one thing the reference cannot do because its character is an athlete.",
+      "grounded_in": [
+        "The reference spends 25% of runtime on a static lockup",
+        "Mask reveal is the dominant cinematic type technique for 2026"
+      ]
+    },
+    {
+      "name": "Press Sheet \u2014 the poster that prints itself",
+      "hook": "Four colour plates land one at a time until the poster exists.",
+      "type": "narrative",
+      "why_now": "The registration crosshair and duotone superimposition are real press mechanics (data_points), so the motion has an honest internal logic instead of arbitrary transitions \u2014 and none of the surveyed kinetic-type content uses it.",
+      "grounded_in": [
+        "Risograph registration/duotone practice",
+        "Print artefacts are a persistent layer in the reference"
+      ]
+    },
+    {
+      "name": "Case File \u2014 evidence-board interrogation cut",
+      "hook": "Coordinates, film stock codes, case numbers, and a face that resolves one plate at a time.",
+      "type": "evergreen",
+      "why_now": "The second supplied poster already speaks this language (FILM C-41, COORDINATES 35\u00b041'N 139\u00b046'E), so the copy is pre-written and the register is cold and procedural rather than the reference's velocity verbs.",
+      "grounded_in": [
+        "Supplied poster typography",
+        "Underserved gap: crime register in rapid-fire graphic grammar"
+      ]
+    },
+    {
+      "name": "Three Prints \u2014 the poster triptych",
+      "hook": "The same frame, three different print treatments, cut against each other.",
+      "type": "data_driven",
+      "why_now": "The user supplied exactly three posters in three different treatments (illustrated, photographic, wide editorial). Cutting between treatments of one subject is the reference's own triptych move scaled up to the whole piece.",
+      "grounded_in": [
+        "Reference shot 4 is a three-panel triptych",
+        "Duotone superimposition"
+      ]
+    }
+  ],
+  "visual_references": [
+    {
+      "description": "Supplied reference video \u2014 12-shot kinetic character reveal, magenta/lilac on paper white",
+      "url": "https://www.behance.net/search/projects/kinetic%20typography",
+      "what_works": "Primary structural reference: shot count, cut rhythm, type-as-occluder move"
+    },
+    {
+      "description": "Studio Dumbar / OutSystems kinetic identity \u2014 big, stacked, stretched type behaving as motion graphics",
+      "url": "https://www.fontfabric.com/blog/10-design-trends-shaping-the-visual-typographic-landscape-in-2026/",
+      "what_works": "Validates heavy-grotesk type-as-hero treatment for 2026"
+    },
+    {
+      "description": "Risograph registration crosshair and duotone superimposition",
+      "url": "https://jennacraiggraphicdesign.wordpress.com/2017/04/14/risograph-printing/",
+      "what_works": "Source of the print-artefact layer in the supplied posters"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.ikagency.com/graphic-design-typography/kinetic-typography/",
+      "title": "Kinetic Typography: The Complete Guide to Motion Text Design in 2026",
+      "used_for": "landscape, data_points (mask reveal)",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://www.fontfabric.com/blog/10-design-trends-shaping-the-visual-typographic-landscape-in-2026/",
+      "title": "Top 10 Design & Typography Trends for 2026",
+      "used_for": "landscape, visual_references",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://fireart.studio/blog/the-best-web-design-trends/",
+      "title": "Web Design Trends 2026: Brutalist UX & Invisible Logic",
+      "used_for": "trending",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://trydemotion.com/blog/text-animation-secrets",
+      "title": "5 Text Animation Secrets I Wish I Knew Before Starting Motion Design",
+      "used_for": "data_points (per-character animation)",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://gsapdemos.com/plugins/text/splittext",
+      "title": "GSAP SplitText Examples",
+      "used_for": "data_points (split-text mechanics), technique selection",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://github.com/iart-ai/kinetic-typography-skills",
+      "title": "kinetic-typography-skills \u2014 beat-synced animated type",
+      "used_for": "landscape (beat-grid layout)",
+      "reliability": "primary"
+    },
+    {
+      "url": "https://jennacraiggraphicdesign.wordpress.com/2017/04/14/risograph-printing/",
+      "title": "Risograph Printing \u2014 registration and duotone",
+      "used_for": "data_points, visual_references, Press Sheet angle",
+      "reliability": "secondary"
+    },
+    {
+      "url": "https://filmora.wondershare.com/video-editing/anime-character-design.html",
+      "title": "Anime character design and trailer composition",
+      "used_for": "data_points (trailer layer mix)",
+      "reliability": "anecdotal"
+    }
+  ],
+  "research_summary": "The reference is a design piece, not a footage piece: twelve poster-frames in ten seconds, one hero glyph each, a strict two-accent palette on an achromatic base, a persistent print-artefact layer, and one signature trick \u2014 the character is depth-interleaved with the type, passing behind one letter and in front of the next. It resolves into a 2.5-second static lockup, which is what makes the preceding cutting legible rather than noisy. That grammar is fully reproducible in code with no image or video generation, which matters because this machine has 0 of 16 image providers and 0 of 26 video providers configured. The differentiation opportunity is register: the supplied posters are neo-noir crime, and crime titles almost never use rapid-fire graphic grammar \u2014 they default to slow and moody. A motionless subject inside a violently moving layout is the inversion the reference cannot perform, and the print mechanics in the posters (registration crosshair, duotone superimposition, halftone) give the motion an honest internal logic instead of arbitrary transitions.",
+  "metadata": {
+    "reference_driven": true,
+    "reference_brief_path": "projects/shinjuku-protocol-reveal/artifacts/video_analysis_brief.json",
+    "reference_animation_mode": "kinetic typography + editorial/print motion design, cut-out subject composited into type",
+    "alternative_modes_considered": [
+      "3D type in Three.js (rejected: reads screen-native, kills the print conceit)",
+      "Manim (rejected: wrong register entirely)",
+      "video generation (unavailable: 0/26 providers configured)"
+    ],
+    "reference_did_well": "withheld reveal; type-as-occluder; resolving into a static lockup",
+    "where_we_can_improve": "give every transition a print-mechanical reason; invert the subject/layout motion relationship"
+  }
+}

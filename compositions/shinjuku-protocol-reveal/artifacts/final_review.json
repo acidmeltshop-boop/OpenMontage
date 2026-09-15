@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "output_path": "projects/shinjuku-protocol-reveal/renders/final.mp4",
+  "status": "pass",
+  "checks": {
+    "technical_probe": {
+      "valid_container": true,
+      "duration_seconds": 10.0,
+      "resolution": "1920x1080",
+      "fps": 24,
+      "has_audio": true,
+      "codec": "h264",
+      "file_size_bytes": 5538125,
+      "issues": []
+    },
+    "visual_spotcheck": {
+      "frames_sampled": 16,
+      "frame_paths": [
+        "scratchpad verify t=0.30",
+        "scratchpad verify t=0.80",
+        "scratchpad verify t=1.40",
+        "scratchpad verify t=2.00",
+        "scratchpad verify t=2.70",
+        "scratchpad verify t=3.30",
+        "scratchpad verify t=3.95",
+        "scratchpad verify t=4.60",
+        "scratchpad verify t=5.20",
+        "scratchpad verify t=5.95",
+        "scratchpad verify t=6.35",
+        "scratchpad verify t=6.62",
+        "scratchpad verify t=6.90",
+        "scratchpad verify t=7.20",
+        "scratchpad verify t=7.60",
+        "scratchpad verify t=9.50"
+      ],
+      "black_frames_detected": false,
+      "broken_overlays": false,
+      "missing_assets": false,
+      "unreadable_text": false,
+      "issues": [
+        "First render opened s11 on ~0.28s of blank stock because the first assembly beat landed a stock plate on a stock ground \u2014 an invisible event. Fixed by landing the trim frame, plate label and registration bar on that beat.",
+        "First render came out at 30fps despite data-fps=24 on the root, because hyperframes_compose passes --fps explicitly and defaults to 30. Fixed by passing fps=24 through video_compose."
+      ]
+    },
+    "audio_spotcheck": {
+      "narration_present": false,
+      "music_present": true,
+      "issues": [],
+      "levels": "mean -16.4 dB, peak -2.3 dB \u2014 headroom intact, no clipping"
+    },
+    "promise_preservation": {
+      "promise_type": "motion_led",
+      "motion_delivered": true,
+      "still_led_fallback_used": false,
+      "runtime_swap_detected": false,
+      "notes": "render_runtime=hyperframes as locked at proposal (d-003). No fallback, no substitution. 12 distinct shots, all motion authored per-shot."
+    },
+    "subtitle_check": {
+      "subtitles_required": false,
+      "subtitles_present": false,
+      "issues": []
+    }
+  },
+  "issues_found": [],
+  "recommended_action": "present_to_user",
+  "metadata": {
+    "distinctness_review": "Could this be any other product's video? No \u2014 the conceit is bound to the source being three printings of one film, and every transition is drawn from how those prints are made. Does it reuse a look built before? No \u2014 no stock scene-type, no registry block, no preset playbook; the composition is hand-authored for this piece.",
+    "check_gate": "npx hyperframes check: 0 errors, contrast 37/37 pass WCAG AA. Remaining warning is timeline density (12 clips on one track), accepted deliberately \u2014 see metadata.density_note.",
+    "density_note": "The lint suggests splitting into sub-compositions. Rejected: HyperFrames requires <audio> to be a direct child of the host root and forbids sub-compositions from animating host elements, so splitting would scatter this piece's media and motion across a boundary for readability alone. Monolithic is the lower-risk choice here."
+  }
+}

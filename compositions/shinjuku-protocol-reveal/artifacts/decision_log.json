@@ -1,0 +1,287 @@
+{
+  "version": "1.0",
+  "project_id": "shinjuku-protocol-reveal",
+  "decisions": [
+    {
+      "decision_id": "d-001",
+      "stage": "proposal",
+      "category": "pipeline_selection",
+      "subject": "Pipeline for the reveal trailer",
+      "options_considered": [
+        {
+          "option_id": "animation",
+          "label": "animation pipeline",
+          "score": 1.0,
+          "reason": "Manifest explicitly covers motion graphics and kinetic typography; reference_input supported."
+        },
+        {
+          "option_id": "cinematic",
+          "label": "cinematic pipeline",
+          "score": 0.5,
+          "reason": "Trailer/teaser oriented",
+          "rejected_because": "Assumes mood-led footage edits; this piece has no footage and is design-led."
+        },
+        {
+          "option_id": "character-animation",
+          "label": "character-animation pipeline",
+          "score": 0.2,
+          "reason": "Character-led",
+          "rejected_because": "Needs a rigged local character; we have flat poster artwork and no rigging source."
+        }
+      ],
+      "selected": "animation",
+      "reason": "The deliverable is kinetic typography and editorial motion design, which is this manifest's stated territory.",
+      "user_visible": true
+    },
+    {
+      "decision_id": "d-002",
+      "stage": "proposal",
+      "category": "composition_mode",
+      "subject": "Composition authoring mode",
+      "options_considered": [
+        {
+          "option_id": "templated",
+          "label": "Templated \u2014 stock cut.type scenes",
+          "score": 0.2,
+          "reason": "Fast and reliable",
+          "rejected_because": "No stock scene-type expresses print plates, registration marks, halftone fields or type-as-occluder. Assembling them would produce the generic look AGENT_GUIDE warns about."
+        },
+        {
+          "option_id": "atelier",
+          "label": "Atelier \u2014 hand-authored composition",
+          "score": 1.0,
+          "reason": "Hero single-deliverable piece with a one-off visual language; the guide defaults hero work to atelier."
+        }
+      ],
+      "selected": "atelier",
+      "reason": "Single hero deliverable whose entire value is a bespoke visual language. Costs more tokens and iteration; the user should opt in knowingly.",
+      "user_visible": true
+    },
+    {
+      "decision_id": "d-003",
+      "stage": "proposal",
+      "category": "render_runtime_selection",
+      "subject": "Composition runtime for the 10s trailer",
+      "options_considered": [
+        {
+          "option_id": "hyperframes",
+          "label": "HyperFrames (HTML/CSS/GSAP)",
+          "score": 0.95,
+          "reason": "Verified available on this machine: node v22.22.2, ffmpeg 6.1.1, npm package hyperframes@0.8.40, Chrome Headless Shell installed via `npx hyperframes browser ensure`. The piece needs background-clip:text, mix-blend-mode duotone, repeating-radial halftone and per-character SplitText staggers \u2014 all CSS/GSAP-native."
+        },
+        {
+          "option_id": "remotion",
+          "label": "Remotion (React)",
+          "score": 0.6,
+          "reason": "Verified available: remotion-composer/ present with node_modules installed. Proven scene stack, word-level caption burn, spring physics.",
+          "rejected_because": "Its advantage is the existing React scene library, which an atelier piece will not touch. The print/typographic vocabulary here is CSS-native and would be fought inside the component model."
+        },
+        {
+          "option_id": "ffmpeg",
+          "label": "FFmpeg only",
+          "score": 0.1,
+          "reason": "Always available",
+          "rejected_because": "Not a composition runtime for this brief \u2014 it cannot do kinetic type. Reserved for standalone trim/transcode/mux."
+        }
+      ],
+      "selected": "hyperframes",
+      "reason": "RECOMMENDED, NOT YET LOCKED \u2014 awaiting explicit user approval per AGENT_GUIDE 'Present Both Composition Runtimes (HARD RULE)'. All three engines were verified available on this machine before the recommendation was made.",
+      "user_visible": true
+    },
+    {
+      "decision_id": "d-004",
+      "stage": "proposal",
+      "category": "motion_commitment",
+      "subject": "Motion requirement for the deliverable",
+      "options_considered": [
+        {
+          "option_id": "motion_led",
+          "label": "Motion-led, no still fallback",
+          "score": 1.0,
+          "reason": "The deliverable is a 10s trailer at 72 cuts/minute; its promise is entirely motion."
+        },
+        {
+          "option_id": "still_led",
+          "label": "Ken Burns / animatic on stills",
+          "score": 0.0,
+          "reason": "Cheaper",
+          "rejected_because": "Forbidden downgrade for a motion-required request; would convert the approved deliverable into a different product."
+        }
+      ],
+      "selected": "motion_led",
+      "reason": "Committed: no still-led or animatic fallback is approved. If the chosen runtime fails at compose time this will be escalated as a blocker, not silently substituted.",
+      "user_visible": true
+    },
+    {
+      "decision_id": "d-005",
+      "stage": "proposal",
+      "category": "music_source",
+      "subject": "Audio bed for the trailer",
+      "options_considered": [
+        {
+          "option_id": "ffmpeg_synth",
+          "label": "Locally synthesised percussive bed (FFmpeg)",
+          "score": 0.8,
+          "reason": "Zero dependency, zero cost, and matches the reference, which uses designed sound rather than music."
+        },
+        {
+          "option_id": "pixabay",
+          "label": "pixabay_music royalty-free download",
+          "score": 0.0,
+          "reason": "Registry reports status 'available'",
+          "rejected_because": "VERIFIED BROKEN in this environment: a live search returned 'Tunnel connection failed: 403 Forbidden'. The host is denied by the session network policy. This is a registry availability claim that does not survive a real call."
+        },
+        {
+          "option_id": "music_gen",
+          "label": "Generated music (music_gen / suno / google_music / fal_elevenlabs / comfyui)",
+          "score": 0.0,
+          "reason": "Would give a real track",
+          "rejected_because": "0 of 5 music_generation providers configured."
+        },
+        {
+          "option_id": "user_library",
+          "label": "User drops a track into music_library/",
+          "score": 0.7,
+          "reason": "Free and gives a real produced track",
+          "rejected_because": "Folder is currently empty; offered to the user as an alternative."
+        },
+        {
+          "option_id": "none",
+          "label": "Silent",
+          "score": 0.1,
+          "reason": "Simplest",
+          "rejected_because": "A 10s cut-fest without impacts reads as broken rather than minimal."
+        }
+      ],
+      "selected": "ffmpeg_synth",
+      "reason": "The only path that is both reachable and honest about what it produces. Surfaced at proposal time rather than deferred to the asset stage.",
+      "user_visible": true
+    },
+    {
+      "decision_id": "d-006",
+      "stage": "proposal",
+      "category": "voice_selection",
+      "subject": "Narration TTS provider",
+      "options_considered": [
+        {
+          "option_id": "none",
+          "label": "No narration",
+          "score": 1.0,
+          "reason": "The reference has zero dialogue; the piece is typographic."
+        },
+        {
+          "option_id": "piper",
+          "label": "piper_tts (local, free)",
+          "score": 0.2,
+          "reason": "The only configured TTS provider (1 of 10)",
+          "rejected_because": "Quality would undercut the broadcast quality floor, and narration is not called for by the form."
+        }
+      ],
+      "selected": "none",
+      "reason": "Silence plus designed sound is the correct register for a 10-second title card.",
+      "user_visible": true
+    },
+    {
+      "decision_id": "d-007",
+      "stage": "proposal",
+      "category": "playbook_selection",
+      "subject": "Style playbook / art direction",
+      "options_considered": [
+        {
+          "option_id": "custom_atelier",
+          "label": "Custom atelier art direction + taste_profile",
+          "score": 1.0,
+          "reason": "Print/editorial noir has its own visual world: registration marks, colour bars, halftone plates, two-accent duotone."
+        },
+        {
+          "option_id": "flat_motion_graphics",
+          "label": "flat-motion-graphics preset",
+          "score": 0.4,
+          "reason": "Nearest preset; correct energy",
+          "rejected_because": "Has no vocabulary for print furniture or plate-based motion, and presets are why videos look alike."
+        }
+      ],
+      "selected": "custom_atelier",
+      "reason": "Per taste-direction: do not let preset availability override the design read.",
+      "user_visible": true
+    },
+    {
+      "decision_id": "d-008",
+      "stage": "proposal",
+      "category": "capability_extension",
+      "subject": "Source of all subject-matter artwork",
+      "options_considered": [
+        {
+          "option_id": "supplied_posters",
+          "label": "Derive every plate from the three supplied posters",
+          "score": 1.0,
+          "reason": "The only source of subject matter available; 0 of 16 image providers configured."
+        },
+        {
+          "option_id": "generate",
+          "label": "Generate new character plates",
+          "score": 0.0,
+          "reason": "Would allow true character/type interleaving",
+          "rejected_because": "No image-generation provider is configured on this machine."
+        }
+      ],
+      "selected": "supplied_posters",
+      "reason": "BLOCKING INPUT: the three posters exist only in the conversation, not on disk. They must be saved to projects/shinjuku-protocol-reveal/assets/reference/ before the assets stage can run.",
+      "user_visible": true
+    },
+    {
+      "decision_id": "d-009",
+      "stage": "proposal",
+      "category": "capability_extension",
+      "subject": "Gate policy for the remainder of the run",
+      "options_considered": [
+        {
+          "option_id": "per_gate",
+          "label": "Stop and wait at script, scene_plan and assets",
+          "score": 0.4,
+          "reason": "Default manifest behaviour; user reviews each artifact before it is used."
+        },
+        {
+          "option_id": "full_run",
+          "label": "Pre-authorised run-through to a finished render",
+          "score": 1.0,
+          "reason": "User instruction, verbatim: 'pull them and run straight through'."
+        }
+      ],
+      "selected": "full_run",
+      "reason": "Explicit user pre-authorisation covering script, scene_plan and assets; the user reviews the finished render instead of each intermediate artifact. NOTE ON CATEGORY: AGENT_GUIDE.md specifies category 'approval_policy' for this entry, but schemas/artifacts/decision_log.schema.json does not carry that value in its enum. Logged under 'capability_extension' so the record exists; the guide/schema mismatch is a real defect and is reported to the user.",
+      "user_visible": true
+    },
+    {
+      "decision_id": "d-010",
+      "stage": "proposal",
+      "category": "concept_selection",
+      "subject": "Concept for the 10s reveal trailer",
+      "options_considered": [
+        {
+          "option_id": "c1",
+          "label": "A \u2014 SHINJUKU PROTOCOL // Press Sheet",
+          "score": 1.0,
+          "reason": "User selected. Print-mechanical transitions; still subject, moving layout."
+        },
+        {
+          "option_id": "c2",
+          "label": "B \u2014 CASE FILE C-41",
+          "score": 0.6,
+          "reason": "Cold procedural evidence-board register",
+          "rejected_because": "Not selected by the user."
+        },
+        {
+          "option_id": "c3",
+          "label": "C \u2014 THREE PRINTINGS",
+          "score": 0.6,
+          "reason": "Triptych-led comparison",
+          "rejected_because": "Not selected by the user."
+        }
+      ],
+      "selected": "c1",
+      "reason": "User selection at the proposal gate.",
+      "user_visible": true
+    }
+  ]
+}

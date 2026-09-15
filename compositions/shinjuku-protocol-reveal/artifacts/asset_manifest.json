@@ -1,0 +1,247 @@
+{
+  "version": "1.0",
+  "assets": [
+    {
+      "id": "plate_art_illustrated",
+      "type": "image",
+      "path": "assets/images/plate_art_illustrated.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s07",
+      "cost_usd": 0.0,
+      "resolution": "755x503",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Illustrated art panel from poster 01, cropped clear of the poster's own type. Fills the letterforms in the signature shot."
+    },
+    {
+      "id": "plate_band_glass",
+      "type": "image",
+      "path": "assets/images/plate_band_glass.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s05",
+      "cost_usd": 0.0,
+      "resolution": "594x252",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Letterbox band \u2014 the hand and the glass. Revealed by the roller wipe when the image window opens."
+    },
+    {
+      "id": "plate_photo",
+      "type": "image",
+      "path": "assets/images/plate_photo.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s11",
+      "cost_usd": 0.0,
+      "resolution": "1649x1128",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Photographic panel from poster 02. The image plate in the assembly and the final lockup."
+    },
+    {
+      "id": "plate_face",
+      "type": "image",
+      "path": "assets/images/plate_face.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s09",
+      "cost_usd": 0.0,
+      "resolution": "784x640",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Editorial face crop from poster 03. Triptych panel A."
+    },
+    {
+      "id": "plate_ots",
+      "type": "image",
+      "path": "assets/images/plate_ots.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s09",
+      "cost_usd": 0.0,
+      "resolution": "1004x960",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Editorial over-shoulder crop from poster 03. Triptych panel B."
+    },
+    {
+      "id": "plate_editorial",
+      "type": "image",
+      "path": "assets/images/plate_editorial.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s09",
+      "cost_usd": 0.0,
+      "resolution": "1920x916",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Editorial wide from poster 03. Triptych panel C."
+    },
+    {
+      "id": "plate_art_duotone",
+      "type": "image",
+      "path": "assets/images/plate_art_duotone.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s06",
+      "cost_usd": 0.0,
+      "resolution": "755x503",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Two-plate duotone separation of the illustrated art \u2014 ink \u2192 crimson \u2192 stock."
+    },
+    {
+      "id": "plate_photo_duotone",
+      "type": "image",
+      "path": "assets/images/plate_photo_duotone.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s06",
+      "cost_usd": 0.0,
+      "resolution": "1649x1128",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Two-plate duotone separation of the photographic panel. The crimson state of the flip."
+    },
+    {
+      "id": "plate_photo_cyan",
+      "type": "image",
+      "path": "assets/images/plate_photo_cyan.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s08",
+      "cost_usd": 0.0,
+      "resolution": "1649x1128",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Cold cyan separation. The inversion beat."
+    },
+    {
+      "id": "plate_art_halftone",
+      "type": "image",
+      "path": "assets/images/plate_art_halftone.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s03",
+      "cost_usd": 0.0,
+      "resolution": "755x503",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Clustered-dot halftone screen, 6px cell at 45\u00b0. The misregister beat."
+    },
+    {
+      "id": "plate_photo_halftone",
+      "type": "image",
+      "path": "assets/images/plate_photo_halftone.png",
+      "source_tool": "build_plates.py (local PIL \u2014 crop / duotone ramp / clustered-dot halftone)",
+      "scene_id": "s10",
+      "cost_usd": 0.0,
+      "resolution": "1649x1128",
+      "format": "png",
+      "subtype": "derived_from_supplied_reference",
+      "provider": "local",
+      "license": "user-supplied source material",
+      "generation_summary": "Clustered-dot halftone screen, 5px cell at 15\u00b0. Density ramp under the roller."
+    },
+    {
+      "id": "bed_wav",
+      "type": "sfx",
+      "path": "assets/audio/bed.wav",
+      "source_tool": "build_audio.py (local numpy synthesis, seed 0xC41)",
+      "scene_id": "all",
+      "cost_usd": 0.0,
+      "duration_seconds": 10.0,
+      "format": "wav",
+      "subtype": "synthesised_design_bed",
+      "provider": "local",
+      "generation_summary": "Percussive design bed built from first principles: one plate impact per cut on the 12-beat grid, misregister ticks, roller whooshes, a 1.25s riser into the lockup, four assembly hits, and a sub-bass floor. Seeded RNG so the render is reproducible."
+    },
+    {
+      "id": "bed_mp3",
+      "type": "sfx",
+      "path": "assets/audio/bed.mp3",
+      "source_tool": "build_audio.py (local numpy synthesis, seed 0xC41)",
+      "scene_id": "all",
+      "cost_usd": 0.0,
+      "duration_seconds": 10.0,
+      "format": "mp3",
+      "subtype": "synthesised_design_bed",
+      "provider": "local",
+      "generation_summary": "Percussive design bed built from first principles: one plate impact per cut on the 12-beat grid, misregister ticks, roller whooshes, a 1.25s riser into the lockup, four assembly hits, and a sub-bass floor. Seeded RNG so the render is reproducible."
+    }
+  ],
+  "total_cost_usd": 0.0,
+  "metadata": {
+    "tool_path_map": {
+      "image_plates": "local PIL (no image_generation provider configured \u2014 0/16)",
+      "audio": "local numpy synthesis (no music provider reachable \u2014 0/5 configured; pixabay_music denied by network policy)",
+      "composition": "hand-authored HyperFrames HTML/CSS/GSAP",
+      "render": "video_compose -> hyperframes"
+    },
+    "reusable_assets": [
+      "the print-furniture layer (crop marks, colour bar, micro-type, barcode) is authored once in CSS and persists across all 12 beats",
+      "one type scale and one tracking value shared by every hero glyph",
+      "one halftone overlay primitive reused at three densities"
+    ],
+    "narration_assets": "none \u2014 the piece has no narration by design",
+    "scene_asset_index": {
+      "s03": [
+        "plate_art_halftone"
+      ],
+      "s05": [
+        "plate_band_glass"
+      ],
+      "s06": [
+        "plate_art_duotone",
+        "plate_photo_duotone"
+      ],
+      "s07": [
+        "plate_art_illustrated"
+      ],
+      "s08": [
+        "plate_photo_cyan"
+      ],
+      "s09": [
+        "plate_face",
+        "plate_ots",
+        "plate_editorial"
+      ],
+      "s10": [
+        "plate_photo_halftone"
+      ],
+      "s11": [
+        "plate_photo"
+      ],
+      "all": [
+        "bed_wav",
+        "bed_mp3"
+      ]
+    },
+    "blocked_assets": [
+      {
+        "asset": "alpha cut-out of the standing man",
+        "blocked_by": "bg_remove is unavailable (enhancement 2/6 configured)",
+        "workaround": "type-as-window via CSS background-clip:text, plus plate-window masking. Disclosed as a quality tradeoff in the proposal."
+      },
+      {
+        "asset": "newly drawn character poses",
+        "blocked_by": "0 of 16 image_generation providers configured",
+        "workaround": "every plate derives from the three supplied posters"
+      }
+    ],
+    "tooling_gap_note": "The registry has no image-processing tool (crop / duotone / halftone) \u2014 only color_grade, which is an ffmpeg video filter. The plate derivation therefore runs as a project-local script under projects/<id>/scripts/, recorded here with full provenance rather than routed through a tool that does not exist.",
+    "provenance": "All subject matter traces to projects/shinjuku-protocol-reveal/assets/reference/{poster_01_illustrated,poster_02_photographic,poster_03_editorial}.png, supplied by the user via reference_posters/ on branch claude/admiring-fermat-oixw3l."
+  }
+}

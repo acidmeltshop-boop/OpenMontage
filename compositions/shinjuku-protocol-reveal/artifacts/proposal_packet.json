@@ -1,0 +1,291 @@
+{
+  "version": "1.0",
+  "concept_options": [
+    {
+      "id": "c1",
+      "title": "SHINJUKU PROTOCOL // Press Sheet",
+      "hook": "The poster prints itself \u2014 plate by plate \u2014 and the man is already standing in the type.",
+      "narrative_structure": "story",
+      "visual_approach": "The trailer IS a printing press. Bone stock lands with crop marks and a colour-calibration bar. The black key plate drops (type only). The crimson plate drops 3px out of register, then snaps home with a hard click. The image plate fills the poster window. From there the type runs: SHINJUKU / PROTOCOL set enormous and bleeding off-frame, with the poster artwork showing THROUGH the letterforms (CSS background-clip:text) \u2014 our version of the reference's type-as-occluder trick, done as printing rather than compositing. Halftone dot field at the plate edges. Resolves into a 2.5s dead-still lockup: barcode, 2023.04.29, coordinates, colour bar.",
+      "suggested_playbook": "custom \u2014 atelier art direction (flat-motion-graphics is the nearest preset and is not close enough)",
+      "target_audience": "design-literate short-form audience; film/anime title-sequence viewers",
+      "target_platform": "generic",
+      "target_duration_seconds": 10,
+      "key_points": [
+        "12 cuts in 10 seconds, matching the reference's 0.83s average shot",
+        "Every transition is a real press mechanic, so the motion has internal logic",
+        "The subject never moves \u2014 the layout does. That is the inversion of the reference."
+      ],
+      "core_message": "SHINJUKU PROTOCOL exists, and it was printed.",
+      "cta": "none \u2014 ends on a static lockup, same as the reference",
+      "tone": "cold, procedural, inked",
+      "grounded_in": [
+        "Risograph registration crosshair and duotone superimposition are real press artefacts",
+        "The reference spends 25% of runtime on a static lockup",
+        "Mask reveal is the dominant cinematic type technique for 2026"
+      ],
+      "why_this_works": "The reference's transitions (polygon shatter, glass break) are arbitrary \u2014 they look good but mean nothing. Research showed the print artefacts in the supplied posters are genuine press mechanics: the registration crosshair is a real swatch, duotone is a real superimposition. Building every transition on that gives the piece a logic the reference does not have, and it is the underserved gap identified in the research landscape."
+    },
+    {
+      "id": "c2",
+      "title": "CASE FILE C-41",
+      "hook": "Coordinates, film stock, case number. Everything is known about him except his face.",
+      "narrative_structure": "data_narrative",
+      "visual_approach": "Evidence-board register. Monospace data types itself on: COORDINATES 35\u00b041'N 139\u00b046'E / FILM C-41 / CASE 2023.04.29. Crimson redaction bars slide across the face and hold. A contact-sheet strip of the three posters scrubs past horizontally like a film strip on a light table. Targeting reticles and HUD micro-type draw on over a wireframe grid. The reveal is withheld to the final beat, when the redaction bars retract and the face is exposed under the title. Motion is mechanical \u2014 bars, scrubs, typewriter cadence \u2014 never physical.",
+      "suggested_playbook": "custom \u2014 atelier art direction",
+      "target_audience": "crime/thriller short-form audience",
+      "target_platform": "generic",
+      "target_duration_seconds": 10,
+      "key_points": [
+        "All on-screen copy is lifted from the supplied posters \u2014 nothing invented",
+        "Reveal is withheld until 8.5s, longer than the reference withholds it",
+        "Zero character animation required"
+      ],
+      "core_message": "They have a file on him.",
+      "cta": "none",
+      "tone": "clinical, tense, surveillance",
+      "grounded_in": [
+        "The second supplied poster already carries FILM C-41 and the coordinates",
+        "Underserved gap: crime register in rapid-fire graphic grammar"
+      ],
+      "why_this_works": "The copy is pre-written by the user's own posters, so the register is authentic rather than pastiche. It swaps the reference's velocity verbs (FULL SPEED, NO BRAKES, JUMP) for a cold procedural vocabulary, which is the single largest tonal differentiator available while keeping the cut rhythm identical."
+    },
+    {
+      "id": "c3",
+      "title": "THREE PRINTINGS",
+      "hook": "Same film. Three printings. Three different men \u2014 until the last frame.",
+      "narrative_structure": "comparison",
+      "visual_approach": "Triptych-led throughout. The frame splits into 1, 2 or 3 vertical panels that slide independently at different speeds, each panel showing a different one of the three supplied posters. Panels duotone-flip between crimson and cold cyan on the beat. Type is set ACROSS panel boundaries so a word only reads when the panels align. The payoff: all three panels slide into register and resolve into one full-bleed lockup \u2014 the same man, three treatments, one film.",
+      "suggested_playbook": "custom \u2014 atelier art direction",
+      "target_audience": "design/print audience; poster collectors",
+      "target_platform": "generic",
+      "target_duration_seconds": 10,
+      "key_points": [
+        "Uses all three supplied posters as equal leads rather than picking one",
+        "Type only resolves when the panels align \u2014 the reveal is typographic, not photographic",
+        "Cheapest and fastest of the three to build"
+      ],
+      "core_message": "One film, printed three ways.",
+      "cta": "none",
+      "tone": "editorial, graphic, cool",
+      "grounded_in": [
+        "Reference shot 4 is a three-panel triptych with rotated side-bar type",
+        "Duotone superimposition"
+      ],
+      "why_this_works": "It takes the single best shot in the reference \u2014 the magenta/white/lilac triptych \u2014 and scales it to the whole piece. It is also the only concept that gives all three supplied posters equal weight, which matters because the user supplied three rather than one."
+    }
+  ],
+  "selected_concept": {
+    "concept_id": "c1",
+    "rationale": "User selected Concept A at the proposal gate. Print-mechanical transitions give the motion internal logic the reference lacks, and a motionless subject inside a violently moving layout is the inversion the reference structurally cannot perform."
+  },
+  "production_plan": {
+    "pipeline": "animation",
+    "renderer_family": "animation-first",
+    "render_runtime": "hyperframes",
+    "composition_mode": "atelier",
+    "playbook": "custom-atelier (no preset)",
+    "art_direction": "Bone stock and ink base, crimson as the only warm accent, cold cyan reserved for registration artefacts. Single heavy grotesk in ALL CAPS, tracked tight, set large enough to bleed. A persistent print-furniture layer: crop marks, colour-calibration bar, barcode, 6-8px technical micro-type. Halftone as a real dot field, never as a filter. One dominant move per shot. Ends dead still.",
+    "taste_profile": {
+      "design_read": "Neo-noir crime title card as a press sheet in motion. Cold, procedural, inked. The layout is violent; the man is still.",
+      "visual_variance": 6,
+      "motion_intensity": 8,
+      "information_density": 3,
+      "palette_discipline": "Bone stock #F2EFE9 and ink #0B0B0C as the base. Crimson #C8102E is the only warm accent; a cold cyan #1FB6C9 appears ONLY as a registration/plate artefact. Never more than two accents in a frame. No gradients on type, ever.",
+      "layout_variation": "Every frame is a poster: full-bleed type plate, image-window plate, or 2-3 panel triptych. Alternate these three families; never two of the same family back to back.",
+      "reference_strategy": "The three supplied posters ARE the reference set \u2014 one per scene family (illustrated / photographic / wide editorial). No generated stills; nothing invented that the posters do not already contain.",
+      "anti_patterns": [
+        "neon-cyberpunk purple/teal gradient backgrounds",
+        "katakana used as decoration with no meaning",
+        "RGB-split glitch as a substitute for a real transition",
+        "full-frame stock film-grain overlay applied as a filter",
+        "drop shadows or bevels on type",
+        "more than one dominant move inside a single shot"
+      ],
+      "quality_gates": [
+        "Freeze any frame: it should work as a printed poster on its own.",
+        "Every transition must have a print-mechanical reason (plate drop, misregistration, roller wipe, panel slide), not a software reason.",
+        "The final 2.5s must be dead still."
+      ]
+    },
+    "delivery_promise": {
+      "promise_type": "motion_led",
+      "motion_required": true,
+      "source_required": false,
+      "tone_mode": "cinematic",
+      "quality_floor": "broadcast",
+      "approved_fallback": null
+    },
+    "music_source": {
+      "source_type": "ai_generated",
+      "provider": "ffmpeg (local synthesis)",
+      "mood_direction": "Percussive design bed, no melody: sub-bass impacts on each plate drop, short filtered whooshes on panel slides, one riser into the lockup, a dry click track locked to the 24fps cut grid. Matches the reference, which has no music either.",
+      "estimated_cost_usd": 0.0
+    },
+    "voice_selection": {
+      "provider": "none",
+      "voice_id": "none",
+      "rationale": "No narration. The reference has zero dialogue and this piece is typographic. Only piper_tts (1 of 10 providers) is configured and its quality would undercut the broadcast quality floor.",
+      "estimated_cost_usd": 0.0,
+      "sample_approval_required": false
+    },
+    "stages": [
+      {
+        "stage": "script",
+        "approach": "Beat sheet: 12 shots on a 24fps grid with per-shot glyph, plate state and copy. No narration script.",
+        "tools": []
+      },
+      {
+        "stage": "scene_plan",
+        "approach": "Per-shot layout spec: panel geometry, type size/tracking, plate offsets, halftone density, transition mechanic, frame in/out.",
+        "tools": []
+      },
+      {
+        "stage": "assets",
+        "approach": "Derive plates from the three supplied posters with local FFmpeg/PIL: window crops, duotone separations, halftone passes, luminance-keyed silhouette. Synthesise the SFX bed with FFmpeg.",
+        "tools": [
+          {
+            "tool_name": "color_grade",
+            "role": "duotone / plate separation passes on the supplied posters",
+            "provider": "ffmpeg",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "local, free, and the only enhancement tool configured"
+          },
+          {
+            "tool_name": "audio_probe",
+            "role": "verify synthesised bed duration against the 10s grid",
+            "provider": "ffprobe",
+            "available": true,
+            "estimated_cost_usd": 0.0
+          }
+        ]
+      },
+      {
+        "stage": "edit",
+        "approach": "Lock the 12-shot cut grid to the SFX bed; carry render_runtime=hyperframes unchanged.",
+        "tools": []
+      },
+      {
+        "stage": "compose",
+        "approach": "Hand-authored HTML/CSS/GSAP composition rendered via video_compose -> _render_via_hyperframes at 1920x1080 24fps.",
+        "tools": [
+          {
+            "tool_name": "video_compose",
+            "role": "final render",
+            "provider": "hyperframes",
+            "available": true,
+            "estimated_cost_usd": 0.0,
+            "why_this_provider": "kinetic typography and print-plate motion are CSS/GSAP-native"
+          },
+          {
+            "tool_name": "composition_validator",
+            "role": "pre-render asset and duration check",
+            "provider": "openmontage",
+            "available": true,
+            "estimated_cost_usd": 0.0
+          }
+        ]
+      }
+    ],
+    "quality_tradeoffs": [
+      {
+        "tradeoff": "No image generation configured (0 of 16 providers) vs. the reference's freshly drawn character art",
+        "recommendation": "Build the piece entirely from the three supplied posters and treat 'printed matter' as the subject.",
+        "quality_impact": "Nothing new can be drawn. Loses the ability to pose the character; gains a concept where that limitation is invisible because the piece is about printing, not performing."
+      },
+      {
+        "tradeoff": "No background-removal tool (bg_remove unavailable) vs. a clean alpha cut-out of the man",
+        "recommendation": "Do the type-as-occluder move as background-clip:text (artwork shows through the letterforms) and plate-window masking instead of compositing a cut-out between letters.",
+        "quality_impact": "Loses the reference's literal 'runs behind the B, in front of the T' depth interleave. The CSS version reads as printing rather than compositing, which is on-concept, but it is a different trick, not the same one."
+      },
+      {
+        "tradeoff": "Synthesised FFmpeg audio bed (free, available) vs. a licensed or generated music track (no provider reachable)",
+        "recommendation": "Synthesise the bed locally; it is designed sound, which is what the reference actually uses.",
+        "quality_impact": "Reads as sound design \u2014 impacts, whooshes, riser, click track \u2014 not as a produced music track. If you drop an MP3 into music_library/ I will use that instead."
+      }
+    ],
+    "alternative_paths": [
+      {
+        "description": "Configure an image-generation key to draw new character plates and poses, enabling true character/type interleaving as in the reference.",
+        "total_cost_usd": 0.0,
+        "quality_level": "premium",
+        "what_changes": "Unlocks new artwork; cost then depends on the provider chosen. Currently 0 of 16 image providers are configured."
+      },
+      {
+        "description": "Drop an MP3 into music_library/ and use it as the bed instead of synthesised sound.",
+        "total_cost_usd": 0.0,
+        "quality_level": "standard",
+        "what_changes": "Replaces designed sound with a real track; cut grid would be re-locked to that track's transients."
+      },
+      {
+        "description": "Render with Remotion instead of HyperFrames (see decision log d-003).",
+        "total_cost_usd": 0.0,
+        "quality_level": "standard",
+        "what_changes": "Same concept, authored in React. Loses CSS-native background-clip:text and blend-mode halftone; gains the existing React scene stack, which this atelier piece would not use anyway."
+      }
+    ],
+    "decision_log_ref": "projects/shinjuku-protocol-reveal/artifacts/decision_log.json"
+  },
+  "cost_estimate": {
+    "total_estimated_usd": 0.0,
+    "budget_cap_usd": 2.0,
+    "budget_verdict": "within_budget",
+    "line_items": [
+      {
+        "tool": "video_compose (hyperframes)",
+        "operation": "render 10s @ 1920x1080 24fps",
+        "quantity": 1,
+        "estimated_usd": 0.0,
+        "notes": "local Chrome headless + ffmpeg"
+      },
+      {
+        "tool": "color_grade (ffmpeg)",
+        "operation": "duotone / halftone plate passes",
+        "quantity": 9,
+        "estimated_usd": 0.0,
+        "notes": "local"
+      },
+      {
+        "tool": "ffmpeg",
+        "operation": "synthesise percussive SFX bed",
+        "quantity": 1,
+        "estimated_usd": 0.0,
+        "notes": "local synthesis; no provider reachable"
+      },
+      {
+        "tool": "image_generation",
+        "operation": "not used",
+        "quantity": 0,
+        "estimated_usd": 0.0,
+        "notes": "0 of 16 providers configured"
+      },
+      {
+        "tool": "video_generation",
+        "operation": "not used",
+        "quantity": 0,
+        "estimated_usd": 0.0,
+        "notes": "0 of 26 providers configured"
+      }
+    ],
+    "savings_options": []
+  },
+  "approval": {
+    "status": "approved",
+    "user_notes": "Concept A, HyperFrames runtime, FFmpeg-synthesised audio bed. Full run-through pre-authorised: 'pull them and run straight through'.",
+    "approved_budget_usd": 2.0
+  },
+  "metadata": {
+    "reference_driven": true,
+    "reference_brief_path": "projects/shinjuku-protocol-reveal/artifacts/video_analysis_brief.json",
+    "blocking_input_required": "RESOLVED \u2014 all three posters received via reference_posters/ on branch claude/admiring-fermat-oixw3l and copied to projects/shinjuku-protocol-reveal/assets/reference/ (848x1264, 1792x2400, 2752x1536, RGB, verified by eye).",
+    "runtime_availability_verified": {
+      "ffmpeg": true,
+      "remotion": true,
+      "hyperframes": true,
+      "hyperframes_doctor": "pass after `npx hyperframes browser ensure` installed Chrome Headless Shell 152.0.7977.30"
+    },
+    "sample_protocol": "10-15s is the full piece here, so the sample will be shots 1-4 (~3.5s) rendered at final quality.",
+    "music_availability_note": "No music provider is reachable on this machine: 0/5 music_generation configured, music_library empty, and pixabay_music reports 'available' in the registry but its network path is blocked by this environment's proxy (verified: 403 on CONNECT). Recommendation is to synthesise the percussive SFX bed locally with FFmpeg \u2014 sub-bass impacts, whooshes, a riser and a click track locked to the cut grid. The reference has no music either, only a percussive SFX bed. Alternatives: user drops an MP3 into music_library/, or configures a music provider key."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "outputs": [
+    {
+      "path": "renders/final.mp4",
+      "format": "mp4",
+      "codec": "h264",
+      "audio_codec": "aac",
+      "resolution": "1920x1080",
+      "fps": 24,
+      "duration_seconds": 10.0,
+      "file_size_bytes": 5538125,
+      "platform_target": "generic"
+    }
+  ],
+  "render_grammar": "animation-first",
+  "warnings": [
+    "hyperframes lint reports timeline_track_too_dense (12 clips on track 1). Accepted deliberately \u2014 splitting into sub-compositions would break the host-root media contract."
+  ],
+  "verification_notes": [
+    "ffprobe: 1920x1080, 24/1 fps, 240 frames, 10.000s, h264 + aac 48kHz stereo.",
+    "Audio measured at mean -16.4 dB / peak -2.3 dB \u2014 no clipping.",
+    "16 frames inspected across all 12 beats; no black frames, no missing assets, no broken overlays.",
+    "hyperframes check gate passed: 0 errors, 37/37 contrast checks pass WCAG AA.",
+    "render_runtime carried through from proposal unchanged: hyperframes, atelier mode."
+  ],
+  "decision_log_ref": "artifacts/decision_log.json",
+  "final_review_ref": "artifacts/final_review.json",
+  "metadata": {
+    "engine": "hyperframes 0.8.40 via video_compose -> _render_via_hyperframes",
+    "composition": "hf/index.html (hand-authored, 12 clips, one paused GSAP timeline)",
+    "art_direction": "hf/art-direction.md",
+    "total_cost_usd": 0.0,
+    "reproducible": "Audio bed uses a seeded RNG (0xC41); plate derivation is deterministic. Re-running build_plates.py + build_audio.py + the render reproduces this output."
+  }
+}

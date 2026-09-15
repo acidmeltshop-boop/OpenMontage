@@ -1,0 +1,367 @@
+{
+  "version": "1.0",
+  "source": {
+    "type": "local_file",
+    "duration_seconds": 10.0,
+    "local_path": "/root/.claude/uploads/91b814d0-0ab4-599a-8e36-ad0487f7051a/bd97b4c0-Animated_character_reveal_trailer_1080p_202609060036.mp4",
+    "title": "bd97b4c0-Animated_character_reveal_trailer_1080p_202609060036"
+  },
+  "content_analysis": {
+    "summary": "A 10-second character-reveal title trailer for a stylised anime heroine. It is not a story trailer \u2014 it is a graphic-design performance: the character is repeatedly introduced by, through, and inside oversized typography. Every one of the twelve shots is a poster that moves, and the character's job is to collide with the layout.",
+    "topics": [
+      "character reveal",
+      "kinetic typography",
+      "idol/streetwear branding",
+      "poster-as-motion design"
+    ],
+    "key_claims": [],
+    "target_audience": "social/short-form audience for anime, idol and streetwear brand content",
+    "tone": "cinematic",
+    "hook_technique": "Print artefact first (registration marks, barcode, colour bar) so the viewer reads 'poster', then violate the poster by letting a character move through it. The reveal is withheld \u2014 eye macro, silhouette, back-of-head \u2014 and the full body lockup is saved for the last 2.5 seconds.",
+    "call_to_action": "none \u2014 it ends on a static logo lockup"
+  },
+  "structure_analysis": {
+    "total_scenes": 12,
+    "scenes": [
+      {
+        "scene_index": 0,
+        "start_time": 0.0,
+        "end_time": 0.625,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 1,
+        "start_time": 0.625,
+        "end_time": 1.25,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 2,
+        "start_time": 1.25,
+        "end_time": 2.125,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 3,
+        "start_time": 2.125,
+        "end_time": 2.833,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 4,
+        "start_time": 2.833,
+        "end_time": 3.5,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 5,
+        "start_time": 3.5,
+        "end_time": 4.125,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 6,
+        "start_time": 4.125,
+        "end_time": 4.792,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 7,
+        "start_time": 4.792,
+        "end_time": 5.458,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 8,
+        "start_time": 5.458,
+        "end_time": 6.25,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 9,
+        "start_time": 6.25,
+        "end_time": 6.875,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 10,
+        "start_time": 6.875,
+        "end_time": 7.5,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      },
+      {
+        "scene_index": 11,
+        "start_time": 7.5,
+        "end_time": 10.0,
+        "description": "",
+        "visual_type": "other",
+        "energy_level": "medium",
+        "motion_type": "unknown",
+        "flow_variance": -1
+      }
+    ],
+    "pacing_profile": {
+      "avg_scene_duration_seconds": 0.83,
+      "shortest_scene_seconds": 0.62,
+      "longest_scene_seconds": 2.5,
+      "cuts_per_minute": 72.0,
+      "pacing_style": "rapid_fire"
+    }
+  },
+  "keyframes": [
+    {
+      "timestamp": 0.1,
+      "scene_index": 0,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0000.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 0.725,
+      "scene_index": 1,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0001.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 1.35,
+      "scene_index": 2,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0002.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 2.225,
+      "scene_index": 3,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0003.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 2.933,
+      "scene_index": 4,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0004.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 3.6,
+      "scene_index": 5,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0005.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 4.225,
+      "scene_index": 6,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0006.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 4.892,
+      "scene_index": 7,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0007.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 5.558,
+      "scene_index": 8,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0008.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 6.35,
+      "scene_index": 9,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0009.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 6.975,
+      "scene_index": 10,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0010.jpg",
+      "description": ""
+    },
+    {
+      "timestamp": 7.6,
+      "scene_index": 11,
+      "path": "/tmp/claude-0/-home-user-OpenMontage/91b814d0-0ab4-599a-8e36-ad0487f7051a/scratchpad/refanalysis/keyframes/frame_0011.jpg",
+      "description": ""
+    }
+  ],
+  "style_profile": {
+    "audio_energy_profile": {
+      "recommended_offset": 0.0,
+      "has_energy_data": true
+    },
+    "color_palette": {
+      "primary_colors": [
+        "#FFFFFF paper white",
+        "#0A0A0A near-black",
+        "#F0F2F5 cool studio grey"
+      ],
+      "accent_colors": [
+        "#E8377F magenta/hot pink",
+        "#B9A5E8 lilac/periwinkle",
+        "#FF2D6F highlight pink"
+      ],
+      "overall_mood": "Two-accent risograph/duotone discipline on an achromatic base. Never more than two accents in a frame."
+    },
+    "typography_observed": "Single family, heavy grotesk in ALL CAPS (Helvetica/Archivo Black territory), tracked tight, set enormous \u2014 often bleeding off-frame. Supporting layer of 6-8px technical micro-type, barcodes, QR, \u25ba\u25ba\u25ba chevrons and crop marks. No serifs, no scripts, no gradients on type.",
+    "transition_types": [
+      "hard cut on the beat",
+      "polygon shatter",
+      "glass break",
+      "horizontal panel slide",
+      "mask wipe by a letterform",
+      "whip/smear"
+    ],
+    "music_style": "no dialogue; percussive SFX bed \u2014 whooshes, impacts, glass, risers, synced to the cuts",
+    "subtitle_style": "none \u2014 all text is design, not captions",
+    "production_quality": "broadcast",
+    "closest_playbook": "flat-motion-graphics",
+    "playbook_delta": "Needs a print/editorial layer the stock playbook has no vocabulary for: registration marks, halftone dot fields, barcodes, colour-calibration bars, and above all TYPE-AS-OCCLUDER (character depth-interleaved with letterforms). That last one is the signature move and must be built bespoke.",
+    "narration_style": {
+      "has_narration": false,
+      "speaker_count": 0,
+      "delivery_style": "none",
+      "words_per_minute": 0
+    }
+  },
+  "replication_guidance": {
+    "suggested_pipeline": "animation",
+    "suggested_playbook": "flat-motion-graphics (heavily customised toward editorial/print)",
+    "key_elements_to_replicate": [
+      "12 shots in 10s \u2014 avg 0.83s, rapid_fire, every cut on a beat",
+      "one hero glyph per shot, set huge, frequently bleeding off-frame",
+      "character depth-interleaved with type (behind one letter, in front of the next)",
+      "strict two-accent palette on an achromatic base",
+      "print artefacts as a persistent layer: crop marks, barcode, micro-type, colour bars",
+      "final 2.5s static lockup \u2014 the payoff is a poster, not a motion flourish",
+      "silhouette / partial / withheld reveal before the full-body reveal"
+    ],
+    "elements_requiring_custom_work": [
+      "type-as-occluder depth interleaving (no stock scene-type does this)",
+      "polygon shatter and glass-break transitions",
+      "halftone dot field and registration/crop-mark furniture",
+      "the character artwork itself \u2014 needs a cut-out subject with alpha"
+    ],
+    "estimated_complexity": "complex",
+    "motion_required": true,
+    "creative_differentiation_seeds": [
+      "Swap the idol/streetwear register for neo-noir crime: the user's three posters are a different genre entirely.",
+      "Swap magenta+lilac for crimson+bone on a black ground \u2014 same two-accent discipline, opposite temperature.",
+      "Swap butterfly particles for cigarette smoke, rain, and neon bokeh.",
+      "Swap the 'FULL SPEED / NO BRAKES' velocity verbs for a cold procedural register: coordinates, film stock codes, case numbers.",
+      "Replace the character's athletic motion with stillness \u2014 in noir the subject barely moves; the LAYOUT moves around him."
+    ],
+    "playbook_customizations": {
+      "add_layer": "print/editorial furniture (registration, halftone, barcode, colour bars)",
+      "motion_law": "cuts land on beat; within a shot, one dominant move only",
+      "type_rule": "one hero glyph per shot, tracked tight, allowed to bleed"
+    },
+    "five_aspect_shot_breakdown": [
+      {
+        "window": "0.00-0.63",
+        "reading": "Print-registration plate: off-white paper, crop marks, barcode, a black rule sliding in from both edges, a magenta circle punching on. Wordmark 'BTS' snaps into the circle in black. Subject: N/A (pure graphic). Camera: locked, no move. Overlays: crop marks, barcode, micro-type."
+      },
+      {
+        "window": "0.63-1.25",
+        "reading": "Hard cut to macro live-action eye, with a giant white 'S' glyph laid over it so the letterform occludes the face. Spatial framing: ECU. The glyph is a foreground layer, not a texture \u2014 the key trick of the piece."
+      },
+      {
+        "window": "1.25-2.13",
+        "reading": "Shatter: the eye frame breaks into magenta/lilac polygonal shards that fly at camera. Transition, not a scene."
+      },
+      {
+        "window": "2.13-2.83",
+        "reading": "Black field, giant white 'BTS' in heavy grotesk. The character (anime girl, white tracksuit, black/pink hair) runs THROUGH the letters \u2014 passing behind the B, in front of the T. Depth interleaving of character and type. Pink butterfly particles + spark bursts trail her."
+      },
+      {
+        "window": "2.83-3.50",
+        "reading": "Triptych: three vertical panels (magenta / white / lilac) each with a rotated 'FULL SPEED' side-bar and the same silhouette in a different pose. Pure graphic-design frame, no photography."
+      },
+      {
+        "window": "3.50-4.13",
+        "reading": "Circular lockup: 'NO BRAKES NO LIMITS' set on a ring around the character, ring counter-rotates while she kicks out of the centre; magenta butterfly burst."
+      },
+      {
+        "window": "4.13-4.79",
+        "reading": "White card, black 'JUMP' in condensed caps; the character lands on a coil spring that physically deforms the 'M'. Type is treated as a physical object."
+      },
+      {
+        "window": "4.79-5.46",
+        "reading": "Lilac field split by a black diagonal band; outlined ghost-type 'FLIP' behind; character does a flip along the diagonal. Diagonal is the composition's motion vector."
+      },
+      {
+        "window": "5.46-6.25",
+        "reading": "White card, 'PINK' in magenta over 'FAST' in black, character crouches in front of the words, partially covering 'FAST'. Then re-stacks to 'FAST / ARMY / BTS'."
+      },
+      {
+        "window": "6.25-6.88",
+        "reading": "Black field, wireframe perspective grid, character small and centred, targeting reticle + HUD micro-type drawing on. Technical/blueprint interlude."
+      },
+      {
+        "window": "6.88-7.50",
+        "reading": "Glass-pane break: 'B-T-S' in white behind glass panes that shatter as the character bursts forward at camera. Cut to a 3-up poster grid (01/02/04, barcodes, QR, magenta circle) that slides horizontally."
+      },
+      {
+        "window": "7.50-10.00",
+        "reading": "Endplate: white studio, character lands from a handstand, concentric magenta/lilac rings draw around her, debris settles, then the final lockup \u2014 'BTS' in heavy black with the character standing INSIDE the letterforms, butterfly badge, barcode, halftone dot field, \u25ba\u25ba\u25ba chevrons. Holds ~2.5s."
+      }
+    ]
+  },
+  "_analysis_meta": {
+    "depth": "deep",
+    "steps_completed": [
+      "metadata",
+      "scene_detect",
+      "motion_classification",
+      "keyframes",
+      "audio_energy"
+    ],
+    "steps_failed": [],
+    "keyframe_count": 12,
+    "scene_count": 12,
+    "has_transcript": false,
+    "duration_seconds": 3.21,
+    "agent_vision_pass": "completed \u2014 12 scene keyframes + 40 dense frames at 4fps reviewed by the agent"
+  }
+}

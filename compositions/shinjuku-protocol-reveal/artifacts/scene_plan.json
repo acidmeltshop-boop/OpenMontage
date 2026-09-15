@@ -1,0 +1,445 @@
+{
+  "version": "1.0",
+  "style_playbook": "custom-atelier (no preset)",
+  "scenes": [
+    {
+      "id": "s01",
+      "type": "animation",
+      "description": "BLANK STOCK \u2014 Bone stock. Crop marks snap to four corners in sequence. Colour-calibration bar draws L\u2192R along the top edge. Margin micro-type sets.",
+      "start_seconds": 0.0,
+      "end_seconds": 0.583,
+      "script_section_id": "s01",
+      "framing": "full-bleed bone field, all four margins visible",
+      "movement": "crop marks snap in sequence; colour bar draws L\u2192R",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: 'SHEET 01 \u00b7 175 LPI \u00b7 C-41'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "wide",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "high_key"
+      },
+      "shot_intent": "Primary visual subject: empty press sheet + registration furniture. Distinct from the beat before and after.",
+      "narrative_role": "establish_context",
+      "hero_moment": false,
+      "information_role": "SHEET 01 \u00b7 175 LPI \u00b7 C-41",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s02",
+      "type": "animation",
+      "description": "KEY PLATE \u2014 Black key plate slams down: type only, huge, bleeding both edges. Registration crosshairs flash once.",
+      "start_seconds": 0.583,
+      "end_seconds": 1.167,
+      "script_section_id": "s02",
+      "framing": "type bleeding off both edges, baseline low",
+      "movement": "plate slams down from +40px with a hard stop",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: 'SHINJUKU'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "wide",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "low_key"
+      },
+      "shot_intent": "Primary visual subject: the word SHINJUKU as a black ink plate. Distinct from the beat before and after.",
+      "narrative_role": "introduce_subject",
+      "hero_moment": false,
+      "information_role": "SHINJUKU",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s03",
+      "type": "animation",
+      "description": "MISREGISTER \u2014 Crimson plate drops 14px off-register. Ghosted double-edge under the black. Jitters twice.",
+      "start_seconds": 1.167,
+      "end_seconds": 1.708,
+      "script_section_id": "s03",
+      "framing": "same lockup as s02, crimson offset 14px up-left",
+      "movement": "two-frame jitter, no easing \u2014 mechanical",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: 'PLATE 2/4 \u00b7 CRIMSON'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "wide",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "low_key"
+      },
+      "shot_intent": "Primary visual subject: the crimson plate, out of register. Distinct from the beat before and after.",
+      "narrative_role": "build_tension",
+      "hero_moment": false,
+      "information_role": "PLATE 2/4 \u00b7 CRIMSON",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s04",
+      "type": "animation",
+      "description": "SNAP \u2014 Plate registers with a hard click. A crimson bar rockets across the frame and stops dead. PROTOCOL lands beneath SHINJUKU.",
+      "start_seconds": 1.708,
+      "end_seconds": 2.25,
+      "script_section_id": "s04",
+      "framing": "horizontal band at the type's optical centre",
+      "movement": "bar rockets L\u2192R and stops dead; PROTOCOL drops in",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: 'PROTOCOL'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "wide",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "high_key"
+      },
+      "shot_intent": "Primary visual subject: a crimson bar crossing the frame. Distinct from the beat before and after.",
+      "narrative_role": "deliver_payload",
+      "hero_moment": false,
+      "information_role": "PROTOCOL",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s05",
+      "type": "animation",
+      "description": "WINDOW OPENS \u2014 Roller wipe cuts an image-window into the sheet. A band only \u2014 the hand, the glass. Halftone dots at the window edge.",
+      "start_seconds": 2.25,
+      "end_seconds": 3.0,
+      "script_section_id": "s05",
+      "framing": "letterbox slot, lower third, poster band inside",
+      "movement": "hard-edged roller wipe L\u2192R reveals the window",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: 'IMAGE PLATE 3/4'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "medium_close",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "high_key"
+      },
+      "shot_intent": "Primary visual subject: the image window opening in the sheet. Distinct from the beat before and after.",
+      "narrative_role": "introduce_subject",
+      "hero_moment": false,
+      "information_role": "IMAGE PLATE 3/4",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s06",
+      "type": "animation",
+      "description": "DUOTONE FLIP \u2014 The window flips full-colour \u2192 crimson/ink duotone \u2192 back, on the beat. Plate label ticks over.",
+      "start_seconds": 3.0,
+      "end_seconds": 3.583,
+      "script_section_id": "s06",
+      "framing": "same window, centred",
+      "movement": "duotone flip full-colour \u2192 crimson/ink \u2192 back, on beat",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: 'SEPARATION'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "medium_close",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "high_key"
+      },
+      "shot_intent": "Primary visual subject: the separated colour plates themselves. Distinct from the beat before and after.",
+      "narrative_role": "evidence",
+      "hero_moment": false,
+      "information_role": "SEPARATION",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s07",
+      "type": "animation",
+      "description": "TYPE THROUGH ARTWORK \u2014 SIGNATURE SHOT. Full-bleed SHINJUKU, letterforms filled with the poster artwork, everything else bone. Letters track out slowly.",
+      "start_seconds": 3.583,
+      "end_seconds": 4.292,
+      "script_section_id": "s07",
+      "framing": "full-bleed type, artwork visible only inside the glyphs",
+      "movement": "letters track out 0.06em; artwork drifts 30px behind",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: 'SHINJUKU'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "wide",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "high_key"
+      },
+      "shot_intent": "Primary visual subject: the poster artwork seen through the letterforms. Distinct from the beat before and after.",
+      "narrative_role": "deliver_payload",
+      "hero_moment": true,
+      "information_role": "SHINJUKU",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s08",
+      "type": "animation",
+      "description": "COLD INVERSION \u2014 Ink field. Cold cyan reticle, grid and coordinates draw on. Small image window centred.",
+      "start_seconds": 4.292,
+      "end_seconds": 4.875,
+      "script_section_id": "s08",
+      "framing": "small centred window in a large ink field",
+      "movement": "reticle rings draw; coordinates type on character by character",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: \"35\u00b041'N 139\u00b046'E\". Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "medium_close",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "low_key"
+      },
+      "shot_intent": "Primary visual subject: a cold technical overlay \u2014 reticle, grid, coordinates. Distinct from the beat before and after.",
+      "narrative_role": "build_tension",
+      "hero_moment": false,
+      "information_role": "35\u00b041'N 139\u00b046'E",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s09",
+      "type": "animation",
+      "description": "TRIPTYCH \u2014 Three vertical panels slide in at different speeds \u2014 the three poster treatments. Rotated side-bar type on each.",
+      "start_seconds": 4.875,
+      "end_seconds": 5.583,
+      "script_section_id": "s09",
+      "framing": "triple vertical split, full height",
+      "movement": "panels slide in at 3 different speeds and stagger to rest",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: 'FILM C-41 / SHEET 02 / NO WITNESS'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "wide",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "high_key"
+      },
+      "shot_intent": "Primary visual subject: three panels of the same film, side by side. Distinct from the beat before and after.",
+      "narrative_role": "comparison",
+      "hero_moment": false,
+      "information_role": "FILM C-41 / SHEET 02 / NO WITNESS",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s10",
+      "type": "animation",
+      "description": "ROLLER WIPE \u2014 A hard-edged crimson roller sweeps across, leaving PROTOCOL knocked out in white. Halftone density ramps under it.",
+      "start_seconds": 5.583,
+      "end_seconds": 6.292,
+      "script_section_id": "s10",
+      "framing": "full-frame sweep, PROTOCOL knocked out white",
+      "movement": "roller sweeps L\u2192R; halftone density ramps beneath it",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: 'PROTOCOL'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "wide",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "high_key"
+      },
+      "shot_intent": "Primary visual subject: the crimson roller. Distinct from the beat before and after.",
+      "narrative_role": "transition",
+      "hero_moment": false,
+      "information_role": "PROTOCOL",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s11",
+      "type": "animation",
+      "description": "ASSEMBLY \u2014 All four plates converge on four beats \u2014 stock, key, crimson, image. Barcode draws in.",
+      "start_seconds": 6.292,
+      "end_seconds": 7.5,
+      "script_section_id": "s11",
+      "framing": "full poster geometry assembling",
+      "movement": "four beats \u2014 stock, key, crimson, image \u2014 each landing hard; barcode draws",
+      "transition_in": "cut",
+      "transition_out": "cut",
+      "overlay_notes": "On-screen copy: '2023.04.29'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "wide",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "high_key"
+      },
+      "shot_intent": "Primary visual subject: the four plates converging into one sheet. Distinct from the beat before and after.",
+      "narrative_role": "resolution",
+      "hero_moment": false,
+      "information_role": "2023.04.29",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    },
+    {
+      "id": "s12",
+      "type": "animation",
+      "description": "LOCKUP \u2014 Dead still. Full poster lockup: crop marks, colour bar, barcode, date, coordinates, \u25ba\u25ba\u25ba. One halftone shimmer settles over 0.4s, then nothing moves.",
+      "start_seconds": 7.5,
+      "end_seconds": 10.0,
+      "script_section_id": "s12",
+      "framing": "full-bleed static lockup",
+      "movement": "nothing. one halftone shimmer settles over 0.4s, then absolute stillness",
+      "transition_in": "cut",
+      "transition_out": "hold",
+      "overlay_notes": "On-screen copy: 'SHINJUKU PROTOCOL'. Persistent furniture layer (crop marks, colour bar, micro-type) stays on throughout.",
+      "shot_language": {
+        "shot_size": "wide",
+        "camera_movement": "static",
+        "depth_of_field": "deep",
+        "color_temperature": "cool",
+        "lighting_key": "high_key"
+      },
+      "shot_intent": "Primary visual subject: the finished poster. Distinct from the beat before and after.",
+      "narrative_role": "resolution",
+      "hero_moment": true,
+      "information_role": "SHINJUKU PROTOCOL",
+      "texture_keywords": [
+        "halftone",
+        "offset-print",
+        "registration",
+        "paper-grain",
+        "knockout"
+      ]
+    }
+  ],
+  "metadata": {
+    "render_runtime": "hyperframes",
+    "composition_mode": "atelier",
+    "palette": {
+      "stock": "#F2EFE9",
+      "ink": "#0B0B0C",
+      "crimson": "#C8102E",
+      "cyan": "#1FB6C9"
+    },
+    "transition_families": [
+      "cut"
+    ],
+    "transition_note": "One family only \u2014 hard cut. All motion happens INSIDE shots as press mechanics (plate drop, misregister jitter, roller wipe, panel slide, shimmer). No dissolves, no glitch, no shatter.",
+    "scene_distinctness_inventory": [
+      {
+        "scene": "s01",
+        "primary_subject": "empty press sheet + registration furniture"
+      },
+      {
+        "scene": "s02",
+        "primary_subject": "the word SHINJUKU as a black ink plate"
+      },
+      {
+        "scene": "s03",
+        "primary_subject": "the crimson plate, out of register"
+      },
+      {
+        "scene": "s04",
+        "primary_subject": "a crimson bar crossing the frame"
+      },
+      {
+        "scene": "s05",
+        "primary_subject": "the image window opening in the sheet"
+      },
+      {
+        "scene": "s06",
+        "primary_subject": "the separated colour plates themselves"
+      },
+      {
+        "scene": "s07",
+        "primary_subject": "the poster artwork seen through the letterforms"
+      },
+      {
+        "scene": "s08",
+        "primary_subject": "a cold technical overlay \u2014 reticle, grid, coordinates"
+      },
+      {
+        "scene": "s09",
+        "primary_subject": "three panels of the same film, side by side"
+      },
+      {
+        "scene": "s10",
+        "primary_subject": "the crimson roller"
+      },
+      {
+        "scene": "s11",
+        "primary_subject": "the four plates converging into one sheet"
+      },
+      {
+        "scene": "s12",
+        "primary_subject": "the finished poster"
+      }
+    ],
+    "scene_distinctness_check": "No two scenes share a primary visual subject. Nearest pair is s02/s03 (both the SHINJUKU lockup) \u2014 s02's subject is the black plate arriving, s03's is the crimson plate failing to register; different plate, different colour, different motion register. Accepted.",
+    "signature_device": "Type-as-window: poster artwork visible only inside the letterforms. Used in exactly one beat (s07) so it stays scarce.",
+    "subject_motion_law": "The man never moves. Every frame he appears in is a still plate. All motion belongs to the layout."
+  }
+}
