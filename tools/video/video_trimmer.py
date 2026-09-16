@@ -179,6 +179,14 @@ class VideoTrimmer(BaseTool):
             artifacts=[str(output_path)],
         )
 
+    def _has_video_stream(self, path: Path) -> bool:
+        """True when `path` contains at least one decodable video stream."""
+        proc = self.run_command([
+            "ffprobe", "-v", "error", "-select_streams", "v:0",
+            "-show_entries", "stream=codec_type", "-of", "csv=p=0", str(path),
+        ])
+        return proc.returncode == 0 and "video" in proc.stdout
+
     def _concat(self, inputs: dict[str, Any]) -> ToolResult:
         segments = inputs.get("segments", [])
         if not segments:
@@ -202,13 +210,47 @@ class VideoTrimmer(BaseTool):
 
                 if seg_start is not None or seg_end is not None:
                     temp_path = temp_dir / f"seg_{i:04d}{seg_input.suffix}"
-                    cmd = ["ffmpeg", "-y", "-i", str(seg_input)]
+                    # -ss must precede -i: as an output option it is applied after
+                    # decoding, which combined with "-c copy" drops every video
+                    # frame before the next keyframe and can yield an audio-only
+                    # segment. Input-side seeking also keeps the cut frame-exact.
+                    cmd = ["ffmpeg", "-y"]
                     if seg_start is not None:
                         cmd.extend(["-ss", str(seg_start)])
+                    cmd.extend(["-i", str(seg_input)])
                     if seg_end is not None:
-                        cmd.extend(["-to", str(seg_end)])
-                    cmd.extend(["-c", "copy", str(temp_path)])
-                    self.run_command(cmd)
+                        # -t (duration from the seek point) rather than -to, whose
+                        # meaning relative to input-side -ss varies across FFmpeg.
+                        duration = float(seg_end) - float(seg_start or 0)
+                        if duration <= 0:
+                            return ToolResult(
+                                success=False,
+                                error=(
+                                    f"Segment {i} has non-positive duration: "
+                                    f"start={seg_start} end={seg_end}"
+                                ),
+                            )
+                        cmd.extend(["-t", str(duration)])
+                    # Stream copy cannot cut at arbitrary frames (keyframes only),
+                    # so trimmed segments re-encode unless the caller insists.
+                    codec = inputs.get("codec", "copy")
+                    if codec == "copy":
+                        codec = "libx264"
+                    cmd.extend(["-c:v", codec, "-c:a", "aac", str(temp_path)])
+                    proc = self.run_command(cmd)
+                    if proc.returncode != 0:
+                        return ToolResult(
+                            success=False,
+                            error=f"FFmpeg error cutting segment {i}: {proc.stderr[-500:]}",
+                        )
+                    if not self._has_video_stream(temp_path):
+                        return ToolResult(
+                            success=False,
+                            error=(
+                                f"Segment {i} produced no video stream "
+                                f"(start={seg_start}, end={seg_end})"
+                            ),
+                        )
                     temp_files.append(temp_path)
                 else:
                     temp_files.append(seg_input)
@@ -228,7 +270,16 @@ class VideoTrimmer(BaseTool):
                 "-c", "copy",
                 str(output_path),
             ]
-            self.run_command(cmd)
+            proc = self.run_command(cmd)
+            if proc.returncode != 0:
+                return ToolResult(
+                    success=False,
+                    error=f"FFmpeg error during concat: {proc.stderr[-500:]}",
+                )
+            if not self._has_video_stream(output_path):
+                return ToolResult(
+                    success=False, error="Concat produced no video stream"
+                )
 
             return ToolResult(
                 success=True,

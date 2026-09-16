@@ -1,0 +1,163 @@
+{
+  "project": "stillwater",
+  "fps": 24,
+  "target_frames": 720,
+  "shots": [
+    {
+      "shot": 1,
+      "title": "THE DESTINATION REVEAL",
+      "source": "Camera_revealing_lake_and_lanterns_20260915220605.mp4",
+      "plan_window": "00.00-03.00",
+      "timeline_in": 0.0,
+      "timeline_out": 3.0,
+      "duration_s": 3.0,
+      "frames": 72,
+      "src_in": 0.12,
+      "src_out": 3.12
+    },
+    {
+      "shot": 2,
+      "title": "A PLACE YOU CAN FEEL",
+      "source": "Water_droplet_falling_from_roof_20260915220522.mp4",
+      "plan_window": "03.00-04.50",
+      "timeline_in": 3.0,
+      "timeline_out": 4.5,
+      "duration_s": 1.5,
+      "frames": 36,
+      "src_in": 0.12,
+      "src_out": 1.62
+    },
+    {
+      "shot": 3,
+      "title": "ARCHITECTURE WITH CHARACTER",
+      "source": "Camera_panning_across_architectu\u2026_20260915220606.mp4",
+      "plan_window": "04.50-06.75",
+      "timeline_in": 4.5,
+      "timeline_out": 6.75,
+      "duration_s": 2.25,
+      "frames": 54,
+      "src_in": 0.12,
+      "src_out": 2.37
+    },
+    {
+      "shot": 4,
+      "title": "IMAGINE YOURSELF HERE",
+      "source": "Woman_holding_tea_looking_up_20260915220533.mp4",
+      "plan_window": "06.75-09.00",
+      "timeline_in": 6.75,
+      "timeline_out": 9.0,
+      "duration_s": 2.25,
+      "frames": 54,
+      "src_in": 0.12,
+      "src_out": 2.37
+    },
+    {
+      "shot": 5,
+      "title": "SIMPLE COMFORT",
+      "source": "Woman_holding_steaming_cup_20260915220533.mp4",
+      "plan_window": "09.00-10.50",
+      "timeline_in": 9.0,
+      "timeline_out": 10.5,
+      "duration_s": 1.5,
+      "frames": 36,
+      "src_in": 0.12,
+      "src_out": 1.62
+    },
+    {
+      "shot": 6,
+      "title": "THE ROOM OPENS TO NATURE",
+      "source": "Woman_stepping_outside_with_cup_20260915220555.mp4",
+      "plan_window": "10.50-12.75",
+      "timeline_in": 10.5,
+      "timeline_out": 12.75,
+      "duration_s": 2.25,
+      "frames": 54,
+      "src_in": 0.12,
+      "src_out": 2.37
+    },
+    {
+      "shot": 7,
+      "title": "WATER AT YOUR DOORSTEP",
+      "source": "Woman_walking_on_timber_deck_20260915220605.mp4",
+      "plan_window": "12.75-15.00",
+      "timeline_in": 12.75,
+      "timeline_out": 15.0,
+      "duration_s": 2.25,
+      "frames": 54,
+      "src_in": 0.12,
+      "src_out": 2.37
+    },
+    {
+      "shot": 8,
+      "title": "THE HIDDEN PERSPECTIVE",
+      "source": "Water_rippling_beneath_deck_posts_20260915220607.mp4",
+      "plan_window": "15.00-16.50",
+      "timeline_in": 15.0,
+      "timeline_out": 16.5,
+      "duration_s": 1.5,
+      "frames": 36,
+      "src_in": 0.12,
+      "src_out": 1.62
+    },
+    {
+      "shot": 9,
+      "title": "YOUR OWN QUIET CORNER",
+      "source": "Woman_holding_cup_on_deck_20260915220555.mp4",
+      "plan_window": "16.50-18.75",
+      "timeline_in": 16.5,
+      "timeline_out": 18.75,
+      "duration_s": 2.25,
+      "frames": 54,
+      "src_in": 0.12,
+      "src_out": 2.37
+    },
+    {
+      "shot": 10,
+      "title": "THE MOMENT THAT SELLS THE STAY",
+      "source": "Woman_and_bird_interacting_indoors_20260915220523.mp4",
+      "plan_window": "18.75-21.75",
+      "timeline_in": 18.75,
+      "timeline_out": 21.75,
+      "duration_s": 3.0,
+      "frames": 72,
+      "src_in": 0.12,
+      "src_out": 3.12
+    },
+    {
+      "shot": 11,
+      "title": "SHARE HER VIEW",
+      "source": "Eyeline_view_of_water_forest_20260915220606.mp4",
+      "plan_window": "21.75-24.00",
+      "timeline_in": 21.75,
+      "timeline_out": 24.0,
+      "duration_s": 2.25,
+      "frames": 54,
+      "src_in": 0.12,
+      "src_out": 2.37
+    },
+    {
+      "shot": 12,
+      "title": "HELD BY THE FOREST",
+      "source": "Empty_swing_in_forest_20260915220607.mp4",
+      "plan_window": "24.00-26.25",
+      "timeline_in": 24.0,
+      "timeline_out": 26.25,
+      "duration_s": 2.25,
+      "frames": 54,
+      "src_in": 0.12,
+      "src_out": 2.37
+    },
+    {
+      "shot": 13,
+      "title": "THE INVITATION",
+      "source": "Aerial_view_of_sanctuary_and_20260915220606.mp4",
+      "plan_window": "26.25-30.00",
+      "timeline_in": 26.25,
+      "timeline_out": 30.0,
+      "duration_s": 3.75,
+      "frames": 90,
+      "src_in": 0.12,
+      "src_out": 3.87
+    }
+  ]
+}
